@@ -1,0 +1,30 @@
+.navbar{
+    background-color: #f47321;
+    border-radius: 0px;
+    font-family: 'Sofia', cursive;
+    font-size: 1.5em;
+}
+
+.navbar-brand{
+    font-size: 1.5em;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #f47321;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #f47321;
+    border-color: #337ab7;
+}
+
+@media (max-width: 767px){
+    .dropdown-menu>li>a {
+    color: #337ab7;
+    }
+    .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #23527c;
+    background-color: #f47321;
+}
+}
