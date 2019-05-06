@@ -4,14 +4,13 @@
         
         <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link href="../addons/bootstrap/jquery.smartmenus.bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
         
     </head>
     <body>
- 
+        
+<!-- Navigation bar 
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -34,6 +33,95 @@
             </ul>
         </div>
     </nav>
+ -->   
+<!-- Search button  
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+        <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">HTML</a></li>
+                <li><a tabindex="-1" href="#">CSS</a></li>
+                <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                        <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+-->
+    
+    
+    
+    
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="{{url_for('home_page')}}"> Nick's Cookbook <i class="material-icons">
+import_contacts
+</i>
+
+</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>Search by:</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{url_for('get_recipes')}}">France</a></li>
+                        <li><a href="#">Thailand</a></li>
+                        <li><a href="#">England</a></li>
+                        <li><a href="#">America</a></li>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">Italy</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Breakfast</a></li>
+                        <li><a href="#">Starter</a></li>
+                        <li><a href="#">Main</a></li>
+                        <li><a href="#">Desert</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Price <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">€</a></li>
+                        <li><a href="#">€€</a></li>
+                        <li><a href="#">€€€</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vegetarian <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Yes</a></li>
+                        <li><a href="#">No</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Log in</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    
+    
     
       
        {% block content %}
@@ -41,6 +129,7 @@
        
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
 <script>
         $(document).ready(function() {

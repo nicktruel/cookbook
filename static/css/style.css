@@ -1,42 +1,17 @@
 .navbar{
     background-color: #f47321;
-    border-radius: 0px;
     font-family: 'Sofia', cursive;
     font-size: 1.5em;
+    border: none;
+    margin-bottom: 0;
+    border-radius: 0;
 }
 
 .navbar-brand{
     font-size: 1.5em;
 }
 
-.nav>li>a:focus, .nav>li>a:hover {
-    text-decoration: none;
-    background-color: #f47321;
-}
-
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-    background-color: #f47321;
-    border-color: #337ab7;
-}
-
-@media (max-width: 767px){
-    .dropdown-menu>li>a {
-    color: #337ab7;
-    }
-    .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: #23527c;
-    background-color: #f47321;
-}
-}
-
-
-
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus{
+    background-color: #d25a0d;
 }

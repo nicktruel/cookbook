@@ -18,7 +18,8 @@ def home_page():
 @app.route('/view_recipes')
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find())
-    
+
+  
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
