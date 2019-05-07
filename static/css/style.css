@@ -57,5 +57,18 @@
 
 /* Carousel settings */
 .carousel-caption{
-    color: #777;
+    color: #fff;
+    font-family: 'Sofia', cursive;
+}
+
+.jumbotron{
+    margin-bottom: 0px;
+    background-color: #000;
+    color: #c1b8b8;
+}
+
+#button-jumbotron {
+    color: #000;
+    background-color: #777777;
+    border-color: #777777;
 }
