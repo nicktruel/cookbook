@@ -55,12 +55,13 @@
   }
 }
 
-/* Carousel settings */
+/* Carousel */
 .carousel-caption{
     color: #fff;
     font-family: 'Sofia', cursive;
 }
 
+/* Jumbotron */
 .jumbotron{
     margin-bottom: 0px;
     background-color: #000;

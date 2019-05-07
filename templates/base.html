@@ -2,9 +2,13 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+        <!-- Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- Link to style.css -->
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
         
     </head>
@@ -27,40 +31,44 @@
         <!-- Nav links,  and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+        <!-- Country dropdown -->
                 <li><a>Search by:</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{url_for('get_recipes')}}">France</a></li>
-                        <li><a href="#">Thailand</a></li>
-                        <li><a href="#">England</a></li>
-                        <li><a href="#">America</a></li>
-                        <li><a href="#">India</a></li>
-                        <li><a href="#">Italy</a></li>
+                        <li><a href="{{url_for('french_recipes')}}">France</a></li>
+                        <li><a href="{{url_for('thai_recipes')}}">Thailand</a></li>
+                        <li><a href="{{url_for('english_recipes')}}">England</a></li>
+                        <li><a href="{{url_for('american_recipes')}}">America</a></li>
+                        <li><a href="{{url_for('indian_recipes')}}">India</a></li>
+                        <li><a href="{{url_for('italian_recipes')}}">Italy</a></li>
                     </ul>
                 </li>
+        <!-- Course dropdown -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Breakfast</a></li>
-                        <li><a href="#">Starter</a></li>
-                        <li><a href="#">Main</a></li>
-                        <li><a href="#">Desert</a></li>
+                        <li><a href="{{url_for('breakfast_recipes')}}">Breakfast</a></li>
+                        <li><a href="{{url_for('starter_recipes')}}">Starter</a></li>
+                        <li><a href="{{url_for('main_recipes')}}">Main</a></li>
+                        <li><a href="{{url_for('desert_recipes')}}">Desert</a></li>
                     </ul>
                 </li>
+        <!-- Cost dropdown -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cost <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">€</a></li>
-                        <li><a href="#">€€</a></li>
-                        <li><a href="#">€€€</a></li>
+                        <li><a href="{{url_for('cheap_recipes')}}">€</a></li>
+                        <li><a href="{{url_for('medium_recipes')}}">€€</a></li>
+                        <li><a href="{{url_for('expensive_recipes')}}">€€€</a></li>
                     </ul>
                 </li>
+        <!-- Vegetarian dropdown -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vegetarian <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Yes</a></li>
-                        <li><a href="#">No</a></li>
+                        <li><a href="{{url_for('veg_recipes')}}">Yes</a></li>
+                        <li><a href="{{url_for('non_veg_recipes')}}">No</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Log in</a></li>
@@ -77,10 +85,12 @@
        {% block content %}
        {% endblock %}
        
+       <!-- Scripts for Bootstrap -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
+<!-- Dropdown of navbar -->
 <script>
         $(document).ready(function() {
             $('.dropdown-submenu a.test').on("click", function(e) {
@@ -91,9 +101,6 @@
         });
 </script>
 
-       
-      
-    
        
     </body>
 </html>
