@@ -4,18 +4,19 @@
         {% for recipe in recipes %}
             
         
-        <div class="container-fluid">        
-        <div class="row">
-          <div class="col-sm-12 col-md-4">
-            <div class="thumbnail">
-              <img src="{{recipe.recipe_img}}" alt="...">
-              <div class="caption">
-                <h3>{{recipe.recipe_name}}</h3>
-                <p>{{recipe.recipe_description}}</p>
-                <p><a href="#" class="btn btn-primary" role="button">See Recipe</a></p>
-              </div>
+        <div class="container recipe_html">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{recipe.recipe_img}}" alt="image of {{recipe.recipe_name}}">
+                        <div class="caption">
+                            <h3>{{recipe.recipe_name}}</h3>
+                            <p>{{recipe.recipe_description}}</p>
+                            <p><a href="/recipe_details/{{ recipe._id }}" class="btn btn-primary" role="button">See Recipe</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
 
 

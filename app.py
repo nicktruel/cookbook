@@ -10,14 +10,15 @@ app.config["MONGO_URI"] = 'mongodb+srv://nickTruel:CamronLouis@myfirstcluster-i1
                             
 mongo = PyMongo(app)
 
+
+# Direct to home.page
 @app.route('/')
 @app.route('/home_page')
 def home_page():
     return render_template("home.html")
  
  
-# Display recipes by country of origin  
-
+# Display recipes by country of origin in recipes.html 
 @app.route('/french_recipes')
 def french_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "France"}))
@@ -44,8 +45,7 @@ def indian_recipes():
   
 
 
-# Display recipes by price 
-
+# Display recipes by price in recipes.html
 @app.route('/cheap_recipes')
 def cheap_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "€"}))
@@ -59,8 +59,7 @@ def expensive_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "€€€"}))
 
 
-# Dispaly recipes by type of course
-
+# Dispaly recipes by type of course in recipes.html
 @app.route('/breakfast_recipes')
 def breakfast_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "breakfast"}))
@@ -78,8 +77,7 @@ def desert_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "desert"}))
 
 
-# Disaply recipes weither vegetarian or not
-
+# Disaply recipes weither vegetarian or not in recipes.html
 @app.route('/veg_recipes')
 def veg_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "yes"}))
@@ -88,7 +86,10 @@ def veg_recipes():
 def non_veg_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "no"}))
 
-
+@app.route('/recipe_details/<recipe_id>')
+def recipe_details(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    return render_template("recipe_details.html", recipe=the_recipe)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

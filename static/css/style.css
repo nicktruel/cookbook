@@ -1,3 +1,5 @@
+/* base.html */
+
 .navbar{
     background-color: #f47321;
     font-family: 'Sofia', cursive;
@@ -55,6 +57,7 @@
   }
 }
 
+/* home.html */
 /* Carousel */
 .carousel-caption{
     color: #fff;
@@ -66,10 +69,23 @@
     margin-bottom: 0px;
     background-color: #000;
     color: #c1b8b8;
+    padding-bottom: 0px;
 }
 
 #button-jumbotron {
     color: #000;
     background-color: #777777;
     border-color: #777777;
+}
+
+/* recipes.html */
+/* container recipe_html */
+.recipe_html{
+    margin-top: 15px;
+}
+
+/* recipe_details.html */
+/* container recipe_details_html */
+.recipe_details_html{
+    margin-top: 15px;
 }
