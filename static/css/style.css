@@ -69,13 +69,18 @@
     margin-bottom: 0px;
     background-color: #000;
     color: #c1b8b8;
-    padding-bottom: 0px;
+    padding: 0px 0px;
 }
 
-#button-jumbotron {
+.button-jumbotron, .button-jumbotron:active:focus{
     color: #000;
     background-color: #777777;
     border-color: #777777;
+}
+.button-jumbotron:hover, .button-jumbotron:focus{
+    color: #000;
+    background-color: #a7a7a7;
+    border-color: #a7a7a7;
 }
 
 /* recipes.html */
@@ -83,6 +88,19 @@
 .recipe_html{
     margin-top: 15px;
 }
+
+.button-cards, .button-cards:active:focus{
+    color: #060505;
+    background-color: #f47321;
+    border-color: #000;
+}
+
+.button-cards:hover, .button-cards:focus{
+    color: #060505;
+    background-color: #ce5508;
+    border-color: #000;
+}
+
 
 /* recipe_details.html */
 /* container recipe_details_html */
