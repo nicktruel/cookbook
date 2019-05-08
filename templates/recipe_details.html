@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
+<div class="page-header text-center">
+  <h1 class="header-details">{{recipe.recipe_name}}</h1>
+</div>
 <div class="container recipe_details_html">
     <div class="row  row-no-gutters">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-10 col-lg-offset-1">
         <img src="{{ recipe.recipe_img }}" width="100%" alt="">   
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+        <p class="rec-det">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         sed diam nonummy nibh euismod tincidunt ut laoreet dolore
         magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
         quis nostrud exerci tation ullamcorper suscipit lobortis nisl
@@ -25,7 +27,8 @@
         quam nunc putamus parum claram, anteposuerit litterarum formas
         humanitatis per seacula quarta decima et quinta decima. Eodem
         modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
-        in futurum.</div>
+        in futurum.</p>
+        </div>
     </div>
 </div>
 

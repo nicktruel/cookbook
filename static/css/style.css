@@ -1,4 +1,7 @@
 /* base.html */
+.bg-success {
+    background-color: #ffe2a2;
+}
 
 .navbar{
     background-color: #f47321;
@@ -14,9 +17,12 @@
 }
 
 /* b-g color of navbar menu items when focused */
-.navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:focus{
     background-color: #d25a0d;
+}
+
+.navbar-default .navbar-nav>li>.search_by:hover {
+    color: #777;
 }
 
 /* Collapse point of navbar at 991px */
@@ -102,8 +108,19 @@
 }
 
 
+
 /* recipe_details.html */
 /* container recipe_details_html */
 .recipe_details_html{
     margin-top: 15px;
+    color: #777;
+}
+
+.header-details{
+    font-family: 'Sofia', cursive;
+    color: #777;
+}
+
+.rec-det{
+    font-size: 1.5em;
 }

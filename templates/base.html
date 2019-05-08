@@ -12,94 +12,94 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
         
     </head>
-    <body>
+    <body class="bg-success">
 
     
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-            <a class="navbar-brand" href="{{url_for('home_page')}}"> Nick's Cookbook <i class="material-icons">import_contacts</i></a>
-        </div>
-
-        <!-- Nav links,  and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-        <!-- Country dropdown -->
-                <li><a>Search by:</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{url_for('french_recipes')}}">France</a></li>
-                        <li><a href="{{url_for('thai_recipes')}}">Thailand</a></li>
-                        <li><a href="{{url_for('english_recipes')}}">England</a></li>
-                        <li><a href="{{url_for('american_recipes')}}">America</a></li>
-                        <li><a href="{{url_for('indian_recipes')}}">India</a></li>
-                        <li><a href="{{url_for('italian_recipes')}}">Italy</a></li>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                    <a class="navbar-brand" href="{{url_for('home_page')}}"> Nick's Cookbook <i class="material-icons">import_contacts</i></a>
+                </div>
+        
+                <!-- Nav links,  and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                <!-- Country dropdown -->
+                        <li><a class="search_by">Search by:</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url_for('french_recipes')}}">France</a></li>
+                                <li><a href="{{url_for('thai_recipes')}}">Thailand</a></li>
+                                <li><a href="{{url_for('english_recipes')}}">England</a></li>
+                                <li><a href="{{url_for('american_recipes')}}">America</a></li>
+                                <li><a href="{{url_for('indian_recipes')}}">India</a></li>
+                                <li><a href="{{url_for('italian_recipes')}}">Italy</a></li>
+                            </ul>
+                        </li>
+                <!-- Course dropdown -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url_for('breakfast_recipes')}}">Breakfast</a></li>
+                                <li><a href="{{url_for('starter_recipes')}}">Starter</a></li>
+                                <li><a href="{{url_for('main_recipes')}}">Main</a></li>
+                                <li><a href="{{url_for('desert_recipes')}}">Desert</a></li>
+                            </ul>
+                        </li>
+                <!-- Cost dropdown -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cost <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url_for('cheap_recipes')}}">€</a></li>
+                                <li><a href="{{url_for('medium_recipes')}}">€€</a></li>
+                                <li><a href="{{url_for('expensive_recipes')}}">€€€</a></li>
+                            </ul>
+                        </li>
+                <!-- Vegetarian dropdown -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vegetarian <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url_for('veg_recipes')}}">Yes</a></li>
+                                <li><a href="{{url_for('non_veg_recipes')}}">No</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Log in</a></li>
                     </ul>
-                </li>
-        <!-- Course dropdown -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{url_for('breakfast_recipes')}}">Breakfast</a></li>
-                        <li><a href="{{url_for('starter_recipes')}}">Starter</a></li>
-                        <li><a href="{{url_for('main_recipes')}}">Main</a></li>
-                        <li><a href="{{url_for('desert_recipes')}}">Desert</a></li>
-                    </ul>
-                </li>
-        <!-- Cost dropdown -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cost <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{url_for('cheap_recipes')}}">€</a></li>
-                        <li><a href="{{url_for('medium_recipes')}}">€€</a></li>
-                        <li><a href="{{url_for('expensive_recipes')}}">€€€</a></li>
-                    </ul>
-                </li>
-        <!-- Vegetarian dropdown -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vegetarian <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{url_for('veg_recipes')}}">Yes</a></li>
-                        <li><a href="{{url_for('non_veg_recipes')}}">No</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Log in</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-    
-    
-    
-      
-       {% block content %}
-       {% endblock %}
-       
-       <!-- Scripts for Bootstrap -->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-
-<!-- Dropdown of navbar -->
-<script>
-        $(document).ready(function() {
-            $('.dropdown-submenu a.test').on("click", function(e) {
-                $(this).next('ul').toggle();
-                e.stopPropagation();
-                e.preventDefault();
-            });
-        });
-</script>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+            
+            
+            
+              
+               {% block content %}
+               {% endblock %}
+               
+               <!-- Scripts for Bootstrap -->
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        
+        <!-- Dropdown of navbar -->
+        <script>
+                $(document).ready(function() {
+                    $('.dropdown-submenu a.test').on("click", function(e) {
+                        $(this).next('ul').toggle();
+                        e.stopPropagation();
+                        e.preventDefault();
+                    });
+                });
+        </script>
 
        
     </body>

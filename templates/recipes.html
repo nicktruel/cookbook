@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-        
         <div class="container recipe_html">
             <div class="row">
                 {% for recipe in recipes %}
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-12 col-md-4 bg-success">
                     <div class="thumbnail">
                         <img src="{{recipe.recipe_img}}" alt="image of {{recipe.recipe_name}}">
                         <div class="caption">
