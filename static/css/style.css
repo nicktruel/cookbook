@@ -68,6 +68,17 @@
 .carousel-caption{
     color: #fff;
     font-family: 'Sofia', cursive;
+    bottom: 30%;
+}
+
+.carousel-indicators {
+    bottom: 30%;
+}
+
+@media (max-width: 991px){
+    .carousel-indicators, .carousel-caption {
+    bottom: 10px;
+    }
 }
 
 /* Jumbotron */
@@ -99,6 +110,7 @@
     color: #060505;
     background-color: #f47321;
     border-color: #000;
+    width: 100%;
 }
 
 .button-cards:hover, .button-cards:focus{
@@ -110,18 +122,12 @@
 
 
 /* recipe_details.html */
-/* container recipe_details_html */
-.recipe_details_html{
-    margin-top: 15px;
-    color: #777;
-}
-
 .header-details{
     font-family: 'Sofia', cursive;
     color: #777;
+    font-size: 32px
 }
 
 .rec-det{
     font-size: 1.5em;
 }
-
