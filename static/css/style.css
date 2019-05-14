@@ -63,6 +63,33 @@
   }
 }
 
+/* Footer */
+footer {
+    position: fixed;
+    background-color: #f47321;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Sofia', cursive;
+    color: #777;
+}
+
+.footer{
+    margin: 0;
+}
+
+.credits{
+    margin: 10px;
+}
+
+
+
+
 /* home.html */
 /* Carousel */
 .carousel-caption{
