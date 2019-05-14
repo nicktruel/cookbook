@@ -2,10 +2,12 @@
 {% block content %}
 
 <div class="page-header text-center">
-  <h1 class="header-details"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> {{recipe.recipe_name}} <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></h1>
+  <h1 class="header-details">
+  <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> {{recipe.recipe_name}}<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></h1>
 </div>
 
 
+<<<<<<< HEAD
 <!--<div class="container recipe_details_html">-->
 <!--    <div class="row  row-no-gutters">-->
 <!--        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-10 col-lg-offset-1">-->
@@ -34,15 +36,33 @@
                 <img src="{{ recipe.recipe_img }}" width="100%" alt="pic of recipe">
                 <div>
                     <!-- Nav tabs -->
+=======
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 ">
+            <div class="thumbnail">
+                <img src="{{ recipe.recipe_img }}" width="100%" alt="...">
+                <div>
+
+>>>>>>> 7c0b3e6c1d81bc89622e9727712c28272869e0b2
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Ingredients</a></li>
                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Method</a></li>
                     </ul>
+<<<<<<< HEAD
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="home"><p class="rec-det">{{recipe.recipe_ingredients}}</p></div>
                         <div role="tabpanel" class="tab-pane" id="profile"><p class="rec-det">{{recipe.recipe_instruction}}</p></div>
+=======
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <p class="rec-det">{{recipe.recipe_ingredients}}</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <p class="rec-det">{{recipe.recipe_instruction}}</div>
+>>>>>>> 7c0b3e6c1d81bc89622e9727712c28272869e0b2
                     </div>
                 </div>
             </div>
@@ -51,8 +71,13 @@
 </div>
 
 <p class="text-center">
+<<<<<<< HEAD
     <a href="#" class="btn btn-warning btn-lg" role="button">Edit Recipe</a>
     <a href="#" class="btn btn-danger btn-lg" role="button">Delete Recipe</a>
+=======
+        <a href="#" class="btn btn-warning btn-lg" role="button">Edit Recipe</a>
+        <a href="#" class="btn btn-danger btn-lg" role="button">Delete Recipe</a>
+>>>>>>> 7c0b3e6c1d81bc89622e9727712c28272869e0b2
 </p>
 
 

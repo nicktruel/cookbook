@@ -86,10 +86,14 @@ def veg_recipes():
 def non_veg_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "no"}))
 
+
+
 @app.route('/recipe_details/<recipe_id>')
 def recipe_details(recipe_id):
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("recipe_details.html", recipe=the_recipe)
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
