@@ -1,3 +1,12 @@
+/* General */
+.cursive-font{
+    font-family: 'Sofia', cursive;
+}
+
+.theme-color{
+    background-color: #f47321;
+}
+
 /* base.html */
 html{
     padding-bottom: 40px;
@@ -9,7 +18,6 @@ html{
 
 .navbar{
     background-color: #f47321;
-    font-family: 'Sofia', cursive;
     font-size: 1.5em;
     border: none;
     margin-bottom: 0;
@@ -79,7 +87,6 @@ footer {
     right: 0;
     text-align: center;
     z-index: 1;
-    font-family: 'Sofia', cursive;
     color: #777;
 }
 
@@ -98,7 +105,6 @@ footer {
 /* Carousel */
 .carousel-caption{
     color: #fff;
-    font-family: 'Sofia', cursive;
     bottom: 30%;
 }
 
@@ -154,7 +160,6 @@ footer {
 
 /* recipe_details.html */
 .header-details{
-    font-family: 'Sofia', cursive;
     color: #777;
     font-size: 32px
 }

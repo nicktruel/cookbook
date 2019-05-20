@@ -87,19 +87,20 @@ def non_veg_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "no"}))
 
 
-
+# Display recipe in details in recipe_details.html
 @app.route('/recipe_details/<recipe_id>')
 def recipe_details(recipe_id):
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("recipe_details.html", recipe=the_recipe)
 
 
-
+# Brings user to page to add a recipe, add_recipe.html
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("add_recipe.html",
     recipes=mongo.db.recipes.find())
 
+# Function to insert a new recipe, then brings user back to home.html
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes=mongo.db.recipes
