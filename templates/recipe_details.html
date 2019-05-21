@@ -13,18 +13,33 @@
             <div class="thumbnail">
                 <img src="{{ recipe.recipe_img }}" width="100%" alt="...">
                 <div>
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs cursive-font" role="tablist">
                         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Ingredients</a></li>
                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Method</a></li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="home">
-                            <p class="rec-det">{{recipe.recipe_ingredients}}</p>
+                        <div role="tabpanel" class="tab-pane active cursive-font" id="home">
+                            <ul>
+                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.0}} {{recipe.recipe_ingredients.name.0}}</li>
+                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.1}} {{recipe.recipe_ingredients.name.1}}</li>
+                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.2}} {{recipe.recipe_ingredients.name.2}}</li>
+                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.3}} {{recipe.recipe_ingredients.name.3}}</li>
+                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.4}} {{recipe.recipe_ingredients.name.4}}</li>
+                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.5}} {{recipe.recipe_ingredients.name.5}}</li>
+                            </ul>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="profile">
-                            <p class="rec-det">{{recipe.recipe_instruction}}</p>
+                        <div role="tabpanel" class="tab-pane cursive-font" id="profile">
+                            <ol>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.0}}</li>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.1}}</li>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.2}}</li>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.3}}</li>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.4}}</li>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.5}}</li>
+                                <li class="rec-det">{{recipe.recipe_instruction.steps.6}}</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
