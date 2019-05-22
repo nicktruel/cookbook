@@ -14,31 +14,120 @@
                 <img src="{{ recipe.recipe_img }}" width="100%" alt="...">
                 <div>
                     <ul class="nav nav-tabs cursive-font" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Ingredients</a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Method</a></li>
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><h3>Ingredients</h3></a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><h3>Method</h3></a></li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active cursive-font" id="home">
                             <ul>
-                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.0}} {{recipe.recipe_ingredients.name.0}}</li>
-                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.1}} {{recipe.recipe_ingredients.name.1}}</li>
-                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.2}} {{recipe.recipe_ingredients.name.2}}</li>
-                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.3}} {{recipe.recipe_ingredients.name.3}}</li>
-                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.4}} {{recipe.recipe_ingredients.name.4}}</li>
-                                <li class="rec-det">{{recipe.recipe_ingredients.quantity.5}} {{recipe.recipe_ingredients.name.5}}</li>
+                                {% if recipe.recipe_ingredients.quantity.0 and recipe.recipe_ingredients.name.0 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.0}} {{recipe.recipe_ingredients.name.0}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.1 and recipe.recipe_ingredients.name.1 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.1}} {{recipe.recipe_ingredients.name.1}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.2 and recipe.recipe_ingredients.name.2 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.2}} {{recipe.recipe_ingredients.name.2}}</li>
+                                {% endif %}
+                                 
+                                {% if recipe.recipe_ingredients.quantity.3 and recipe.recipe_ingredients.name.3 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.3}} {{recipe.recipe_ingredients.name.3}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.4 and recipe.recipe_ingredients.name.4 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.4}} {{recipe.recipe_ingredients.name.4}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.5 and recipe.recipe_ingredients.name.5 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.5}} {{recipe.recipe_ingredients.name.5}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.6 and recipe.recipe_ingredients.name.6 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.6}} {{recipe.recipe_ingredients.name.6}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.7 and recipe.recipe_ingredients.name.7 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.7}} {{recipe.recipe_ingredients.name.7}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.8 and recipe.recipe_ingredients.name.8 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.8}} {{recipe.recipe_ingredients.name.8}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.9 and recipe.recipe_ingredients.name.9 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.9}} {{recipe.recipe_ingredients.name.9}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.10 and recipe.recipe_ingredients.name.10 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.10}} {{recipe.recipe_ingredients.name.10}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.11 and recipe.recipe_ingredients.name.11 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.11}} {{recipe.recipe_ingredients.name.11}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.12 and recipe.recipe_ingredients.name.12 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.12}} {{recipe.recipe_ingredients.name.12}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.13 and recipe.recipe_ingredients.name.13 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.13}} {{recipe.recipe_ingredients.name.13}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.14 and recipe.recipe_ingredients.name.14 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.14}} {{recipe.recipe_ingredients.name.14}}</li>
+                                {% endif %}
+                                
+                                {% if recipe.recipe_ingredients.quantity.16 and recipe.recipe_ingredients.name.16 %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.16}} {{recipe.recipe_ingredients.name.16}}</li>
+                                {% endif %}
                             </ul>
                         </div>
                         <div role="tabpanel" class="tab-pane cursive-font" id="profile">
                             <ol>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.0}}</li>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.1}}</li>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.2}}</li>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.3}}</li>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.4}}</li>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.5}}</li>
-                                <li class="rec-det">{{recipe.recipe_instruction.steps.6}}</li>
+                                {% if recipe.recipe_instruction.steps.0 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.0}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.1 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.1}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.2 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.2}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.3 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.3}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.4 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.4}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.5 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.5}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.6 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.6}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.7 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.7}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.8 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.8}}</li>
+                                {% endif %}
+                                <br>
+                                {% if recipe.recipe_instruction.steps.9 %}
+                                    <li class="rec-det">{{recipe.recipe_instruction.steps.9}}</li>
+                                {% endif %}
                             </ol>
                         </div>
                     </div>

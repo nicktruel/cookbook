@@ -103,12 +103,8 @@ footer {
 
 /* home.html */
 /* Carousel */
-.carousel-caption{
+.carousel-caption, .carousel-indicators{
     color: #fff;
-    bottom: 30%;
-}
-
-.carousel-indicators {
     bottom: 30%;
 }
 
