@@ -21,6 +21,7 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active cursive-font" id="home">
+<!-- List of ingredients name and quantiy -->
                             <ul>
                                 {% if recipe.recipe_ingredients.quantity.0 and recipe.recipe_ingredients.name.0 %}
                                     <li class="rec-det">{{recipe.recipe_ingredients.quantity.0}} {{recipe.recipe_ingredients.name.0}}</li>
@@ -87,7 +88,9 @@
                                 {% endif %}
                             </ul>
                         </div>
+                        
                         <div role="tabpanel" class="tab-pane cursive-font" id="profile">
+<!-- List of instruction steps -->
                             <ol>
                                 {% if recipe.recipe_instruction.steps.0 %}
                                     <li class="rec-det">{{recipe.recipe_instruction.steps.0}}</li>

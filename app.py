@@ -98,7 +98,7 @@ def recipe_details(recipe_id):
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("recipe_details.html", recipe=the_recipe)
 
-
+# Display page to edit recipes, edit_recipe.html
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
