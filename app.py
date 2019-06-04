@@ -49,15 +49,15 @@ def indian_recipes():
 # Display recipes by price in recipes.html
 @app.route('/cheap_recipes')
 def cheap_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "€"}))
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "option1"}))
     
 @app.route('/medium_recipes')
 def medium_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "€€"}))
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "option2"}))
 
 @app.route('/expensive_recipes')
 def expensive_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "€€€"}))
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "option3"}))
 
 
 # Dispaly recipes by type of course in recipes.html
@@ -105,7 +105,22 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=the_recipe)
 
 
-
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    mongo.db.recipes.update({'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name': request.form.get('recipe_name'),
+        'recipe_country': request.form.get('recipe_country'),
+        'recipe_description': request.form.get('recipe_description'),
+        'recipe_ingredients': request.form.get('recipe_ingredients.name'),
+        'recipe_ingredients': request.form.get('recipe_ingredients.quantity'),
+        'recipe_instruction': request.form.get('recipe_instruction.steps'),
+        'course_type': request.form.get('course_type'),
+        'price_tag': request.form.get('price_tag'),
+        'recipe_img': request.form.get('recipe_img'),
+        'vegetarian_recipe': request.form.get('vegetarian_recipe'),
+    })
+    return redirect(url_for('home_page'))
 
 
 #@app.route('/get_recipes')

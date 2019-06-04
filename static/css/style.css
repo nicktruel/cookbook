@@ -169,3 +169,18 @@ footer {
 .add-rec{
     margin-top: 20px;
 }
+
+/* Lists in edit_recipe.html and add_recipe.html */
+.quantity {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.ingredients{
+    padding-left: 15px;
+}
+
+.instructions{
+    padding-left: 15px;
+}

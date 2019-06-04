@@ -25,6 +25,8 @@
                             <ul>
                                 {% if recipe.recipe_ingredients.quantity.0 and recipe.recipe_ingredients.name.0 %}
                                     <li class="rec-det">{{recipe.recipe_ingredients.quantity.0}} {{recipe.recipe_ingredients.name.0}}</li>
+                                {% else %}
+                                    <li class="rec-det">{{recipe.recipe_ingredients.quantity.0}} {{recipe.recipe_ingredients.name.0}}</li>
                                 {% endif %}
                                 
                                 {% if recipe.recipe_ingredients.quantity.1 and recipe.recipe_ingredients.name.1 %}
