@@ -85,11 +85,11 @@
                             <label for="recipe_instruction">Recipe Method</label>
                             <ol class="instructions">
                                 <li>
-                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Enter all steps for cooking your recipe"></textarea>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Step 1"></textarea>
                                 </li>
                                 <br>
                                 <li>
-                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Enter all steps for cooking your recipe"></textarea>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Step 2"></textarea>
                                 </li>
                             </ol>
                         </div>
@@ -108,7 +108,8 @@
                    </div>
                    
                     <div class="text-center">
-                        <button type="submit" class="btn btn-defaul active" name="action">Click to add</button>
+                        <button type="submit" class="btn btn-info active" name="action">Click to add</button>
+                        <a href="{{url_for('home_page')}}" class="btn btn-primary" role="button">Cancel</a>
                     </div>
                 </form>
             </div>
