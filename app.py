@@ -44,6 +44,9 @@ def italian_recipes():
 def indian_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "India"}))
   
+@app.route('/other_country_recipes')
+def other_country_recipes():
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "Other"}))
 
 
 # Display recipes by price in recipes.html
@@ -77,13 +80,15 @@ def main_recipes():
 def desert_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "desert"}))
 
-
+@app.route('/other_course_recipes')
+def other_course_recipes():
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "other"}))
 
 
 # Disaply recipes weither vegetarian or not in recipes.html
 @app.route('/veg_recipes')
 def veg_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": True}))
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "on"}))
     
 @app.route('/non_veg_recipes')
 def non_veg_recipes():
@@ -112,7 +117,7 @@ def update_recipe(recipe_id):
         'recipe_name': request.form.get('recipe_name'),
         'recipe_country': request.form.get('recipe_country'),
         'recipe_description': request.form.get('recipe_description'),
-        'recipe_ingredients': request.form.get({'recipe_ingredients.name': ''}, {'recipe_ingredients.quantity': ''}),
+        'recipe_ingredients': request.form.get({'id': ObjectId(recipe_ingredients.name)}, {'id': ObjectId(recipe_ingredients.quantity)}),
         'recipe_instruction': request.form.get('recipe_instruction.steps'),
         'course_type': request.form.get('course_type'),
         'price_tag': request.form.get('price_tag'),
@@ -146,14 +151,24 @@ def insert_recipe():
         'recipe_country': request.form.get('recipe_country'),
         'course_type': request.form.get('course_type'),
         'vegetarian_recipe': request.form.get('vegetarian_recipe'),
-        'recipe_ingredients': request.form.get('recipe_ingredients'),
+        'recipe_ingredients': request.form.get('recipe_ingredients.name'),
+        'recipe_ingredients': request.form.get('recipe_ingredients.quantity'),
+        
+        ##db.inventory.find( { "instock": { warehouse: "A", qty: 5 } } )
+        
         'recipe_instruction': request.form.get('recipe_instruction'),
+        
+        
         'price_tag': request.form.get('price_tag')
     })
     return redirect(url_for('home_page'))
 
 
-
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+   
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return render_template("home.html")
 
 
 

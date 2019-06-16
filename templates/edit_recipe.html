@@ -32,15 +32,40 @@
                         
                         <div class="form-group">
                             <label for="recipe_country">Country Of Origin</label>
-                            <input type="text" class="form-control" id="recipe_country" name="recipe_country" value="{{recipe.recipe_country}}" required>
+                            <select class="form-control" required>
+                              <option selected>{{recipe.recipe_country}}</option>
+                              <option>France</option>
+                              <option>Thailand</option>
+                              <option>England</option>
+                              <option >America</option>
+                              <option>India</option>
+                              <option>Italy</option>
+                              <option>Other</option>
+                            </select>
+                            <!--<input type="text" class="form-control" id="recipe_country" name="recipe_country" value="{{recipe.recipe_country}}" required>-->
                         </div>
                         <div class="form-group">
                             <label for="course_type">Type Of Course</label>
-                            <input type="text" class="form-control" id="course_type" name="course_type" value="{{recipe.course_type}}" required>
+                            <select class="form-control" required>
+                              <option selected>{{recipe.course_type}}</option>
+                              <option id="course_type" name="course_type">Breakfast</option>
+                              <option id="course_type" name="course_type">Starter</option>
+                              <option id="course_type" name="course_type">Main</option>
+                              <option id="course_type" name="course_type">Desert</option>
+                              <option id="course_type" name="course_type">Other</option>
+                            </select>
+                            <!--<input type="text" class="form-control" id="course_type" name="course_type" value="{{recipe.course_type}}" required>-->
                         </div>
                         
                          <div class="checkbox">
-                            <label><input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe" value="{{recipe.vegetarian_recipe}}" required> Tick if vegeterian </label>
+                            <label>
+                                {% if recipe.vegetarian_recipe %}
+                                <input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe" value="{{recipe.vegetarian_recipe}}" checked>
+                                {% else %}
+                                <input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe" value="{{recipe.vegetarian_recipe}}">
+                                {% endif %}
+                                Tick if vegeterian 
+                            </label>
                         </div>
                     </div>
                     
@@ -328,13 +353,13 @@
                         <div class="form-group">
                             <label for="price_tag">Price tag: </label>
                             <label class="radio-inline">
-                            <input type="radio" id="price_tag" name="price_tag" id="price_tag" value="option1"> €
+                            <input type="radio" id="price_tag" name="price_tag" value="option1"> €
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" id="price_tag" name="price_tag" id="price_tag" value="option2"> €€
+                            <input type="radio" id="price_tag" name="price_tag" value="option2"> €€
                             </label>
                             <label class="radio-inline">
-                            <input type="radio"id="price_tag" name="price_tag"  value="option3"> €€€
+                            <input type="radio" id="price_tag" name="price_tag" value="option3"> €€€
                             </label>
                         </div>
                    </div>

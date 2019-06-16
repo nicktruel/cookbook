@@ -18,12 +18,12 @@
                     <div class="container-fluid">
                         <div class="form-group">
                             <label for="recipe_name">Recipe name</label>
-                            <input type="text" class="form-control" id="recipe_name" name="recipe_name" placeholder="e.g. chicken curry">
+                            <input type="text" class="form-control" id="recipe_name" name="recipe_name" placeholder="e.g. chicken curry" required>
                         </div>
     
                          <div class="form-group">
                             <label for="recipe_description">Small Description</label>
-                            <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" placeholder="e.g. Classic indian dish, easy to make"></textarea>
+                            <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" placeholder="e.g. Classic indian dish, easy to make" required></textarea>
                         </div>
                         
                         <div class="form-group">
@@ -31,18 +31,38 @@
                             <input type="file" id="recipe_img" name="recipe_img">
                             <p class="help-block">Add your own image if desired</p>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="recipe_country">Country Of Origin</label>
-                            <input type="text" class="form-control" id="recipe_country" name="recipe_country" placeholder="e.g. France">
+                            <select class="form-control" required>
+                              <option selected disabled>Choose One</option>
+                              <option>France</option>
+                              <option>Thailand</option>
+                              <option>England</option>
+                              <option>America</option>
+                              <option>India</option>
+                              <option>Italy</option>
+                              <option>Other</option>
+                            </select>
+                            <!--<input type="text" class="form-control" id="recipe_country" name="recipe_country" placeholder="e.g. France" required>-->
                         </div>
                         <div class="form-group">
                             <label for="course_type">Type Of Course</label>
-                            <input type="text" class="form-control" id="course_type" name="course_type" placeholder="e.g. Main">
+                            <select class="form-control" required>
+                              <option selected disabled>Choose One</option>
+                              <option id="course_type" name="course_type">Breakfast</option>
+                              <option id="course_type" name="course_type">Starter</option>
+                              <option id="course_type" name="course_type">Main</option>
+                              <option id="course_type" name="course_type">Desert</option>
+                              <option id="course_type" name="course_type">Other</option>
+                            </select>
+                            <!--<input type="text" class="form-control" id="course_type" name="course_type" placeholder="e.g. Main" required>-->
                         </div>
                         
                          <div class="checkbox">
-                            <label><input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe" > Tick if vegeterian </label>
+                            <label>
+                                <input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe"> Tick if vegeterian 
+                            </label>
                         </div>
                     </div>
                     
@@ -53,11 +73,11 @@
                                     <label for="recipe_ingredients">List of Ingredients</label>
                                     <ol class="ingredients">
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" placeholder="e.g. Chicken breast">
+                                        <input type="text" class="form-control" id="recipe_ingredients.name.0" name="recipe_ingredients.name.0" placeholder="e.g. Chicken breast" required>
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" placeholder="e.g. Chicken breast">
+                                        <input type="text" class="form-control" id="recipe_ingredients.name.1" name="recipe_ingredients.name.1" placeholder="e.g. Chicken breast" required>
                                         </li>
                                     </ol>
                                 </div>
@@ -67,11 +87,11 @@
                                     <label for="recipe_ingredients">Quantity</label>
                                     <ul class="quantity">
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" placeholder="e.g. 200g">
+                                        <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" placeholder="e.g. 200g" required>
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" placeholder="e.g. 200g">
+                                        <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" placeholder="e.g. 200g" required>
                                         </li>
                                     </ul>
                                 </div>
@@ -85,11 +105,11 @@
                             <label for="recipe_instruction">Recipe Method</label>
                             <ol class="instructions">
                                 <li>
-                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Step 1"></textarea>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Step 1" required></textarea>
                                 </li>
                                 <br>
                                 <li>
-                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Step 2"></textarea>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" placeholder="Step 2" required></textarea>
                                 </li>
                             </ol>
                         </div>
