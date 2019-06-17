@@ -117,8 +117,9 @@ def update_recipe(recipe_id):
         'recipe_name': request.form.get('recipe_name'),
         'recipe_country': request.form.get('recipe_country'),
         'recipe_description': request.form.get('recipe_description'),
-        'recipe_ingredients': request.form.get({'id': ObjectId(recipe_ingredients.name)}, {'id': ObjectId(recipe_ingredients.quantity)}),
-        'recipe_instruction': request.form.get('recipe_instruction.steps'),
+        'recipe_ingredients': request.form.get('recipe_ingredients'),
+        'recipe_ingredients_quantity': request.form.get('recipe_ingredients_quantity'),
+        'recipe_instruction': request.form.get('recipe_instruction'),
         'course_type': request.form.get('course_type'),
         'price_tag': request.form.get('price_tag'),
         'recipe_img': request.form.get('recipe_img'),
@@ -151,14 +152,22 @@ def insert_recipe():
         'recipe_country': request.form.get('recipe_country'),
         'course_type': request.form.get('course_type'),
         'vegetarian_recipe': request.form.get('vegetarian_recipe'),
-        'recipe_ingredients': request.form.get('recipe_ingredients.name'),
-        'recipe_ingredients': request.form.get('recipe_ingredients.quantity'),
-        
-        ##db.inventory.find( { "instock": { warehouse: "A", qty: 5 } } )
-        
-        'recipe_instruction': request.form.get('recipe_instruction'),
-        
-        
+        'recipe_ingredient0': request.form.get('recipe_ingredient.0'),
+        'recipe_ingredient1': request.form.get('recipe_ingredient.1'),
+        'recipe_ingredient2': request.form.get('recipe_ingredient.2'),
+        'recipe_ingredient3': request.form.get('recipe_ingredient.3'),
+        'recipe_ingredient4': request.form.get('recipe_ingredient.4'),
+        'recipe_ingredient5': request.form.get('recipe_ingredient.5'),
+        'recipe_ingredients_quantity0': request.form.get('recipe_ingredients_quantity.0'),
+        'recipe_ingredients_quantity1': request.form.get('recipe_ingredients_quantity.1'),
+        'recipe_ingredients_quantity2': request.form.get('recipe_ingredients_quantity.2'),
+        'recipe_ingredients_quantity3': request.form.get('recipe_ingredients_quantity.3'),
+        'recipe_ingredients_quantity4': request.form.get('recipe_ingredients_quantity.4'),
+        'recipe_ingredients_quantity5': request.form.get('recipe_ingredients_quantity.5'),
+        'recipe_instruction0': request.form.get('recipe_instruction.0'),
+        'recipe_instruction1': request.form.get('recipe_instruction.1'),
+        'recipe_instruction2': request.form.get('recipe_instruction.2'),
+        'recipe_instruction3': request.form.get('recipe_instruction.3'),
         'price_tag': request.form.get('price_tag')
     })
     return redirect(url_for('home_page'))
@@ -166,7 +175,6 @@ def insert_recipe():
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
-   
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return render_template("home.html")
 
