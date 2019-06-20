@@ -26,7 +26,7 @@
                         
                         <div class="form-group">
                             <label for="recipe_img">Add image</label>
-                            <input type="file" id="recipe_img" name="recipe_img" value="{{recipe.recipe_img}}" required>
+                            <input type="file" id="recipe_img" name="recipe_img" value="{{recipe.recipe_img}}">
                             <p class="help-block">Add your own image if desired</p>
                         </div>
                         
@@ -79,99 +79,17 @@
                                         <ol class="ingredients">
                                                 {% if recipe.recipe_ingredient0 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient0}}" required>
+                                                <input type="text" class="form-control" id="recipe_ingredients.0" name="recipe_ingredients.0" value="{{recipe.recipe_ingredient0}}" required>
                                                 </li>
                                                 {% endif %}
                                                 <br>
                                                 {% if recipe.recipe_ingredient1 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient1}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.1" name="recipe_ingredients.1" value="{{recipe.recipe_ingredient1}}">
                                                 </li>
                                                 {% endif %}
                                                 <br>
-                                                {% if recipe.recipe_ingredient2 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient2}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient3 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient3}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient4 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient4}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient5 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient5}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient6 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient6}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient7 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient7}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient8 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient8}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient9 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient9}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient10 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient10}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient11 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient11}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient12 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient12}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient13 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient13}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient14 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.name" name="recipe_ingredients.name" value="{{recipe.recipe_ingredient14}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient15 %}
-                                                <li>
-                                                </li>
-                                                {% endif %}
-                                                <br>
+                                                
                                             </ol>
                                 </div>
                             </div>
