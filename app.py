@@ -199,7 +199,7 @@ def confirm_addition():
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
-    return render_template("home.html")
+    return render_template("confirm_deletion.html")
 
 
 
