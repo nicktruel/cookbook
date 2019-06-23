@@ -26,46 +26,150 @@
                             <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" placeholder="e.g. Classic indian dish, easy to make..." required></textarea>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="recipe_img">Add image (https://)</label>
-                            <input type="file" id="recipe_img" name="recipe_img">
-                            <p class="help-block">Add your own image if desired</p>
+                        <!--<div class="form-group">-->
+                        <!--    <label for="recipe_img">Add image (https://)</label>-->
+                        <!--    <input type="file" id="recipe_img" name="recipe_img">-->
+                        <!--    <p class="help-block">Add your own image if desired</p>-->
+                        <!--</div>-->
+                        
+                        <label for="basic-url">Add your image link</label>
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                         </div>
-
-                        <div class="form-group">
-                            <label for="recipe_country">Country Of Origin</label>
-                            <select class="form-control" required>
-                              <option selected disabled>Choose One</option>
-                              <option>France</option>
-                              <option>Thailand</option>
-                              <option>England</option>
-                              <option>America</option>
-                              <option>India</option>
-                              <option>Italy</option>
-                              <option>Other</option>
-                            </select>
-                            <!--<input type="text" class="form-control" id="recipe_country" name="recipe_country" placeholder="e.g. France" required>-->
+                        <br>
+                        
+                        
+                        <label for="recipe_country">Choose the country of origin</label>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option1" checked>
+                                            France
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option2">
+                                            Thailand
+                                            </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option3">
+                                            Other
+                                            </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option4">
+                                            America
+                                            </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option5" >
+                                            India
+                                            </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option6">
+                                            Italy
+                                            </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="option7">
+                                            England
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="course_type">Type Of Course</label>
-                            <select class="form-control" required>
-                              <option selected disabled>Choose One</option>
-                              <option id="course_type" name="course_type">Breakfast</option>
-                              <option id="course_type" name="course_type">Starter</option>
-                              <option id="course_type" name="course_type">Main</option>
-                              <option id="course_type" name="course_type">Desert</option>
-                              <option id="course_type" name="course_type">Other</option>
-                            </select>
-                            <!--<input type="text" class="form-control" id="course_type" name="course_type" placeholder="e.g. Main" required>-->
+                    
+                        <br>
+                        
+                        <!--<div class="form-group">-->
+                        <!--    <label for="course_type">Type Of Course</label>-->
+                        <!--    <select class="form-control" required>-->
+                        <!--      <option selected disabled>Choose One</option>-->
+                        <!--      <option id="course_type" name="course_type">Breakfast</option>-->
+                        <!--      <option id="course_type" name="course_type">Starter</option>-->
+                        <!--      <option id="course_type" name="course_type">Main</option>-->
+                        <!--      <option id="course_type" name="course_type">Desert</option>-->
+                        <!--      <option id="course_type" name="course_type">Other</option>-->
+                        <!--    </select>-->
+                        <!--</div>-->
+                        
+                        <label for="course_type">Choose the type of course</label>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option1" checked>
+                                            Breakfast
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option2">
+                                            Starter
+                                            </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option3">
+                                            Main
+                                            </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option4" >
+                                            Desert
+                                            </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option5">
+                                            Other
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <label for="vegetarian_recipe">Vegetarian dish</label>
+                        <br>
+                        <div class="radio-inline">
+                            <label>
+                            <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option1" checked>
+                            Yes
+                          </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                            <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option2">
+                            No
+                          </label>
                         </div>
                         
-                         <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe"> Tick if vegeterian 
-                            </label>
-                        </div>
+                        
+
                     </div>
-                    
+                    <br>
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-8">
@@ -73,29 +177,43 @@
                                     <label for="recipe_ingredients">List of Ingredients</label>
                                     <ol class="ingredients">
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredient.0" name="recipe_ingredient.0" placeholder="e.g. Chicken breast" required>
+                                            <input type="text" class="form-control" id="recipe_ingredient.0" name="recipe_ingredient.0" placeholder="e.g. Chicken breast" required>
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredient.1" name="recipe_ingredient.1">
+                                            <input type="text" class="form-control" id="recipe_ingredient.1" name="recipe_ingredient.1" placeholder=" ">
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredient.2" name="recipe_ingredient.2">
+                                            <input type="text" class="form-control" id="recipe_ingredient.2" name="recipe_ingredient.2" placeholder=" ">
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredient.3" name="recipe_ingredient.3">
+                                            <input type="text" class="form-control" id="recipe_ingredient.3" name="recipe_ingredient.3" placeholder=" ">
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredient.4" name="recipe_ingredient.4">
+                                            <input type="text" class="form-control" id="recipe_ingredient.4" name="recipe_ingredient.4" placeholder=" ">
                                         </li>
                                         <br>
-                                        <p>If more ingredients required add new field by clicking</p>
-                                        
                                         <li>
-                                            
+                                            <input type="text" class="form-control" id="recipe_ingredient.5" name="recipe_ingredient.5" placeholder=" ">
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.6" name="recipe_ingredient.6" placeholder=" ">
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.7" name="recipe_ingredient.7" placeholder=" ">
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.8" name="recipe_ingredient.8" placeholder=" ">
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.9" name="recipe_ingredient.9" placeholder=" ">
                                         </li>
                                         <br>
                                     </ol>
@@ -125,7 +243,26 @@
                                         <input type="text" class="form-control" id="recipe_ingredients_quantity.4" name="recipe_ingredients_quantity.4">
                                         </li>
                                         <br>
-                                        
+                                        <li>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.5" name="recipe_ingredients_quantity.5">
+                                        </li>
+                                        <br>
+                                        <li>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.6" name="recipe_ingredients_quantity.6">
+                                        </li>
+                                        <br>
+                                        <li>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.7" name="recipe_ingredients_quantity.7">
+                                        </li>
+                                        <br>
+                                        <li>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.8" name="recipe_ingredients_quantity.8">
+                                        </li>
+                                        <br>
+                                        <li>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.9" name="recipe_ingredients_quantity.9">
+                                        </li>
+                                        <br>
                                     </ul>
                                 </div>
                             </div>
@@ -153,12 +290,30 @@
                                 <textarea type="text" rows="3" class="form-control" id="recipe_instruction.3" name="recipe_instruction.3" placeholder="Step 4"></textarea>
                                 </li>
                                 <br>
+                                <li>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.4" name="recipe_instruction.4" placeholder="Step 5"></textarea>
+                                </li>
+                                <br>
+                                <li>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.5" name="recipe_instruction.5" placeholder="Step 6"></textarea>
+                                </li>
+                                <br>
+                                <li>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.6" name="recipe_instruction.6" placeholder="Step 7"></textarea>
+                                </li>
+                                <br>
+                                <li>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.7" name="recipe_instruction.7" placeholder="Step 8"></textarea>
+                                </li>
+                                <br>
                             </ol>
                         </div>
+                        
+                        <label for="price_tag">Price tag: </label>
                         <div class="form-group">
-                            <label for="price_tag">Price tag: </label>
+                            
                             <label class="radio-inline">
-                            <input type="radio" id="price_tag" name="price_tag" value="option1"> €
+                            <input type="radio" id="price_tag" name="price_tag" value="option1" checked> €
                             </label>
                             <label class="radio-inline">
                             <input type="radio" id="price_tag" name="price_tag" value="option2"> €€
