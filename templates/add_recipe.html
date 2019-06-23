@@ -17,32 +17,33 @@
 <!-- Recipe name -->                    
                     <div class="container-fluid">
                         <div class="form-group">
-                            <label for="recipe_name">Recipe name</label>
+                            <label for="recipe_name">Recipe name:</label>
                             <input type="text" class="form-control" id="recipe_name" name="recipe_name" placeholder="e.g. chicken curry..." required>
                         </div>
 
 <!-- Recipe description -->    
-                         <div class="form-group">
-                            <label for="recipe_description">Small Description</label>
+                        <div class="form-group">
+                            <label for="recipe_description">Small Description:</label>
                             <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" placeholder="e.g. Classic indian dish, easy to make..." required></textarea>
                         </div>
                         
 <!-- Image of dish -->                        
-                        <!--<div class="form-group">-->
-                        <!--    <label for="recipe_img">Add image (https://)</label>-->
-                        <!--    <input type="file" id="recipe_img" name="recipe_img">-->
-                        <!--    <p class="help-block">Add your own image if desired</p>-->
-                        <!--</div>-->
-                        
-                        <label for="basic-url">Add your image link</label>
-                        <div class="input-group">
-                          <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        <div class="form-group">
+                            <label for="recipe_img">Add image</label>
+                            <input type="file" id="recipe_img" name="recipe_img">
+                            <img class="img-responsive" src="" alt="" width="400" height="266"> 
+                            <p class="help-block">Add your own image if desired</p>
                         </div>
-                        <br>
+                        
+                        <!--<label for="basic-url">Add your image link:</label>-->
+                        <!--<div class="input-group">-->
+                        <!--  <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>-->
+                        <!--  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">-->
+                        <!--</div>-->
+                        <!--<br>-->
                         
 <!-- Country of origin -->                        
-                        <label for="recipe_country">Choose the country of origin</label>
+                        <label for="recipe_country">Choose the country of origin:</label>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-4">
@@ -98,7 +99,7 @@
                         <br>
                         
 <!-- Course type -->
-                        <label for="course_type">Choose the type of course</label>
+                        <label for="course_type">Choose the type of course:</label>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-4">
@@ -142,7 +143,7 @@
                         <br>
  
 <!-- Vegetarian option -->                        
-                        <label for="vegetarian_recipe">Vegetarian dish</label>
+                        <label for="vegetarian_recipe">Vegetarian dish:</label>
                         <br>
                         <div class="radio-inline">
                             <label>
@@ -165,7 +166,7 @@
                         <div class="row">
                             <div class="col-xs-8">
                                  <div class="form-group">
-                                    <label for="recipe_ingredients">List of Ingredients</label>
+                                    <label for="recipe_ingredients">List of Ingredients:</label>
                                     <p><small>(2 at least)</small></p>
                                     <ol class="ingredients">
                                         <li>
@@ -190,7 +191,7 @@
                                         <br>
                                         
 <!-- Collpase ingredients -->                                        
-                                        <button class="btn" type="button" data-toggle="collapse" data-target="#collapseIngredients, #collapseIngredientsQuantity" aria-expanded="false" aria-controls="collapseIngredients">
+                                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseIngredients, #collapseIngredientsQuantity" aria-expanded="false" aria-controls="collapseIngredients">
                                           Click here to add more ingredients
                                         </button>
                                         <div class="collapse" id="collapseIngredients">
@@ -226,7 +227,7 @@
 <!-- List of ingredients quantities -->                            
                              <div class="col-xs-4">
                                  <div class="form-group">
-                                    <label for="recipe_ingredients_quantity">Quantity</label>
+                                    <label for="recipe_ingredients_quantity">Quantity:</label>
                                     <p><small>(2 at least)</small></p>
                                     <ul class="quantity">
                                         <li>
@@ -285,7 +286,7 @@
 <!-- Recipe method -->                    
                     <div class="container-fluid">
                         <div class="form-group">
-                            <label for="recipe_instruction">Recipe Method <small>(Minimum 1 required)</small></label>
+                            <label for="recipe_instruction">Recipe Method <small>(At least 1 step required):</small></label>
                             <ol class="instructions">
                                 <li>
                                 <textarea type="text" rows="3" class="form-control" id="recipe_instruction.0" name="recipe_instruction.0" placeholder="Step 1" required></textarea>
@@ -308,7 +309,7 @@
                                 </li>
                                 <br>
 <!-- Collapse steps -->                                
-                                <button class="btn" type="button" data-toggle="collapse" data-target="#collapseSteps" aria-expanded="false" aria-controls="collapseSteps">
+                                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseSteps" aria-expanded="false" aria-controls="collapseSteps">
                                   Click here to add more steps
                                 </button>
                                 <div class="collapse" id="collapseSteps">
@@ -340,7 +341,7 @@
                         </div>
  
 <!-- Price tag -->                       
-                        <label for="price_tag">Price tag: </label>
+                        <label for="price_tag">Cost: </label>
                         <div class="form-group">
                             
                             <label class="radio-inline">

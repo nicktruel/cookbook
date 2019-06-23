@@ -164,6 +164,9 @@ footer {
     font-size: 1.5em;
 }
 
+.page-header {
+     border-bottom: 0; 
+}
 
 /* add_recipe.html */
 .add-rec{

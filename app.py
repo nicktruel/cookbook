@@ -188,7 +188,12 @@ def insert_recipe():
         'recipe_instruction7': request.form.get('recipe_instruction.7').capitalize(),
         'price_tag': request.form.get('price_tag')
     })
-    return redirect(url_for('home_page'))
+    return redirect(url_for('confirm_addition'))
+
+@app.route('/confirm_addition')
+def confirm_addition():
+    return render_template('confirm_addition.html')
+    
 
 
 @app.route('/delete_recipe/<recipe_id>')
