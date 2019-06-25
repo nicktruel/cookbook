@@ -14,211 +14,299 @@
             <div class="thumbnail">
                 <form action="{{url_for('update_recipe', recipe_id=recipe._id)}}" method="POST">
                     <div class="container-fluid">
+<!-- Recipe name -->                        
                         <div class="form-group">
-                            <label for="recipe_name">Recipe name</label>
+                            <label for="recipe_name">Recipe name:</label>
                             <input type="text" class="form-control" id="recipe_name" name="recipe_name" value="{{recipe.recipe_name}}"  required>
                         </div>
-                        
+
+<!-- Recipe description -->                         
                         <div class="form-group">
-                            <label for="recipe_description">Small Description</label>
+                            <label for="recipe_description">Small Description:</label>
                             <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" value="{{recipe.recipe_description}}" required>{{recipe.recipe_description}}</textarea>
                         </div>
                         
+<!-- Image of dish --> 
                         <div class="form-group">
-                            <label for="recipe_img">Add image</label>
+                            <label for="recipe_img">Add image:</label>
                             <input type="file" id="recipe_img" name="recipe_img" value="{{recipe.recipe_img}}">
                             <p class="help-block">Add your own image if desired</p>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="recipe_country">Country Of Origin</label>
-                            <select class="form-control" required>
-                              <option selected>{{recipe.recipe_country}}</option>
-                              <option>France</option>
-                              <option>Thailand</option>
-                              <option>England</option>
-                              <option >America</option>
-                              <option>India</option>
-                              <option>Italy</option>
-                              <option>Other</option>
-                            </select>
-                            <!--<input type="text" class="form-control" id="recipe_country" name="recipe_country" value="{{recipe.recipe_country}}" required>-->
+<!-- Country of origin --> 
+                        <label for="recipe_country">Choose the country of origin:</label>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}" checked>
+                                            France
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}">
+                                            Thailand
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}">
+                                            Other
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}">
+                                            America
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}" >
+                                            India
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}">
+                                            Italy
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="recipe_country" id="recipe_country" value="{{recipe.recipe_country}}">
+                                            England
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="course_type">Type Of Course</label>
-                            <select class="form-control" required>
-                              <option selected>{{recipe.course_type}}</option>
-                              <option id="course_type" name="course_type">Breakfast</option>
-                              <option id="course_type" name="course_type">Starter</option>
-                              <option id="course_type" name="course_type">Main</option>
-                              <option id="course_type" name="course_type">Desert</option>
-                              <option id="course_type" name="course_type">Other</option>
-                            </select>
-                            <!--<input type="text" class="form-control" id="course_type" name="course_type" value="{{recipe.course_type}}" required>-->
+                        <br>
+
+<!-- Course type -->                         
+                        <label for="course_type">Choose the type of course:</label>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option1" checked>
+                                            Breakfast
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option2">
+                                            Starter
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option3">
+                                            Main
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option4" >
+                                            Desert
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="course_type" id="course_type" value="option5">
+                                            Other
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <br>
                         
-                         <div class="checkbox">
+<!-- Vegetarian option --> 
+                        <label for="vegetarian_recipe">Vegetarian dish:</label>
+                        <br>
+                        <div class="radio-inline">
                             <label>
-                                {% if recipe.vegetarian_recipe %}
-                                <input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe" value="{{recipe.vegetarian_recipe}}" checked>
-                                {% else %}
-                                <input type="checkbox" id="vegetarian_recipe" name="vegetarian_recipe" value="{{recipe.vegetarian_recipe}}">
-                                {% endif %}
-                                Tick if vegeterian 
+                                <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option1" checked>
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option2">
+                                No
                             </label>
                         </div>
                     </div>
-                    
+                        <br>
+
                     
 <!-- List of ingredients name --> 
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-8">
                                 <div class="form-group">
-                                    <label for="recipe_ingredients">List of Ingredients</label>
-                                        <ol class="ingredients">
-                                                {% if recipe.recipe_ingredient0 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.0" name="recipe_ingredients.0" value="{{recipe.recipe_ingredient0}}" required>
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                {% if recipe.recipe_ingredient1 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.1" name="recipe_ingredients.1" value="{{recipe.recipe_ingredient1}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                
-                                            </ol>
+                                    <label for="recipe_ingredients">List of Ingredients:</label>
+                                    <ol class="ingredients">
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.0" name="recipe_ingredient.0" value="{{recipe.recipe_ingredient0}}" placeholder="{{recipe.recipe_ingredient0}}" required>
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.1" name="recipe_ingredient.1" value="{{recipe.recipe_ingredient1}}" placeholder=" {{recipe.recipe_ingredient1}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.2" name="recipe_ingredient.2" value="{{recipe.recipe_ingredient2}}" placeholder=" {{recipe.recipe_ingredient2}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.3" name="recipe_ingredient.3" value="{{recipe.recipe_ingredient3}}" placeholder=" {{recipe.recipe_ingredient3}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.4" name="recipe_ingredient.4" value="{{recipe.recipe_ingredient4}}" placeholder=" {{recipe.recipe_ingredient4}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.5" name="recipe_ingredient.5" value="{{recipe.recipe_ingredient5}}" placeholder=" {{recipe.recipe_ingredient5}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.6" name="recipe_ingredient.6" value="{{recipe.recipe_ingredient6}}" placeholder=" {{recipe.recipe_ingredient6}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.7" name="recipe_ingredient.7" value="{{recipe.recipe_ingredient7}}" placeholder=" {{recipe.recipe_ingredient7}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.8" name="recipe_ingredient.8" value="{{recipe.recipe_ingredient8}}" placeholder=" {{recipe.recipe_ingredient8}}">
+                                            </li>
+                                            <br>
+                                            <li>
+                                            <input type="text" class="form-control" id="recipe_ingredient.9" name="recipe_ingredient.9" value="{{recipe.recipe_ingredient9}}" placeholder=" {{recipe.recipe_ingredient9}}">
+                                            </li>
+                                            <br>
+                                    </ol>
                                 </div>
                             </div>
+                            
 <!-- List of ingredients quantity -->   
                              <div class="col-xs-4">
                                 <div class="form-group">
-                                    <label for="recipe_ingredients">Quantity</label>
+                                    <label for="recipe_ingredients">Quantity:</label>
                                         <ul class="quantity">
-                                                {% if recipe.recipe_ingredients_quantity0 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity0}}" required>
+                                                <input type="text" class="form-control" id="recipe_ingredients_quantity.0" name="recipe_ingredients_quantity.0" value="{{recipe.recipe_ingredients_quantity0}}" required>
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity1 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity1}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients_quantity.1" name="recipe_ingredients_quantity.1" value="{{recipe.recipe_ingredients_quantity1}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity2 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity2}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.2" name="recipe_ingredients.quantity.2" value="{{recipe.recipe_ingredients_quantity2}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity3 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity3}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.3" name="recipe_ingredients.quantity.3" value="{{recipe.recipe_ingredients_quantity3}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity4 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity4}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.4" name="recipe_ingredients.quantity.4" value="{{recipe.recipe_ingredients_quantity4}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity5 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity5}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.5" name="recipe_ingredients.quantity.5" value="{{recipe.recipe_ingredients_quantity5}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity6 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity6}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.6" name="recipe_ingredients.quantity.6" value="{{recipe.recipe_ingredients_quantity6}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity7 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity7}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.7" name="recipe_ingredients.quantity.7" value="{{recipe.recipe_ingredients_quantity7}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity8 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity8}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.8" name="recipe_ingredients.quantity.8" value="{{recipe.recipe_ingredients_quantity8}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity9 %}
                                                 <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity9}}">
+                                                <input type="text" class="form-control" id="recipe_ingredients.quantity.9" name="recipe_ingredients.quantity.9" value="{{recipe.recipe_ingredients_quantity9}}">
                                                 </li>
-                                                {% endif %}
                                                 <br>
-                                                 {% if recipe.recipe_ingredients_quantity10 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity10}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                 {% if recipe.recipe_ingredients_quantity11 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity11}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                 {% if recipe.recipe_ingredients_quantity12 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity12}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                 {% if recipe.recipe_ingredients_quantity13 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity13}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                 {% if recipe.recipe_ingredients_quantity14 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity14}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                                 {% if recipe.recipe_ingredients_quantity15 %}
-                                                <li>
-                                                <input type="text" class="form-control" id="recipe_ingredients.quantity" name="recipe_ingredients.quantity" value="{{recipe.recipe_ingredients_quantity15}}">
-                                                </li>
-                                                {% endif %}
-                                                <br>
-                                            </ul>
+                                        </ul>
                                 </div>
                             </div>
                         </div>
                     </div>                 
                     
-<!-- List of instruction steps -->   
+<!-- Recipe method -->   
                     <div class="container-fluid">
                         <div class="form-group">
-                            <label for="recipe_instruction">Recipe Method</label>
+                            <label for="recipe_instruction">Recipe Method:</label>
                             <ol class="instructions">
-                                {% if recipe.recipe_instruction0 %}
                                 <li>
-                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.steps" name="recipe_instruction.steps" value="{{recipe.recipe_instruction0}}" required>{{recipe.recipe_instruction0}}</textarea>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.0" name="recipe_instruction.0" value="{{recipe.recipe_instruction0}}" required>{{recipe.recipe_instruction0}}</textarea>
                                 </li>
-                                {% endif %}
+                                <br>
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.1" name="recipe_instruction.1" value="{{recipe.recipe_instruction1}}">{{recipe.recipe_instruction1}}</textarea>
+                                </li>
+                                <br>
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.2" name="recipe_instruction.2" value="{{recipe.recipe_instruction2}}">{{recipe.recipe_instruction2}}</textarea>
+                                </li>
                                 <br> 
-                                
-                            
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.3" name="recipe_instruction.3" value="{{recipe.recipe_instruction3}}">{{recipe.recipe_instruction3}}</textarea>
+                                </li>
+                                <br> 
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.4" name="recipe_instruction.4" value="{{recipe.recipe_instruction4}}">{{recipe.recipe_instruction4}}</textarea>
+                                </li>
+                                <br>
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.5" name="recipe_instruction.5" value="{{recipe.recipe_instruction5}}">{{recipe.recipe_instruction5}}</textarea>
+                                </li>
+                                <br> 
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.6" name="recipe_instruction.6" value="{{recipe.recipe_instruction6}}">{{recipe.recipe_instruction6}}</textarea>
+                                </li>
+                                <br> 
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.7" name="recipe_instruction.7" value="{{recipe.recipe_instruction7}}">{{recipe.recipe_instruction7}}</textarea>
+                                </li>
+                                <br> 
+                                <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.8" name="recipe_instruction.8" value="{{recipe.recipe_instruction8}}">{{recipe.recipe_instruction8}}</textarea>
+                                </li>
+                                <br> 
+                                 <li>
+                                    <textarea type="text" rows="3" class="form-control" id="recipe_instruction.9" name="recipe_instruction.9" value="{{recipe.recipe_instruction9}}">{{recipe.recipe_instruction9}}</textarea>
+                                </li>
+                                <br> 
                             </ol>
                         </div>
+
+<!-- Cost -->                         
                         <div class="form-group">
-                            <label for="price_tag">Price tag: </label>
+                            <label for="price_tag">Cost: </label>
                             <label class="radio-inline">
-                            <input type="radio" id="price_tag" name="price_tag" value="option1"> €
+                            <input type="radio" id="price_tag" name="price_tag" value="option1" checked> €
                             </label>
                             <label class="radio-inline">
                             <input type="radio" id="price_tag" name="price_tag" value="option2"> €€
