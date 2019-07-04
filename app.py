@@ -152,7 +152,8 @@ def update_recipe(recipe_id):
         'recipe_img': request.form.get('recipe_img'),
         'vegetarian_recipe': request.form.get('vegetarian_recipe'),
     })
-    return redirect(url_for('home_page'))
+    #return redirect(url_for('home_page'))
+    return render_template("confirm_update.html")
 
 
 #@app.route('/get_recipes')
@@ -211,12 +212,9 @@ def insert_recipe():
         'recipe_instruction9': request.form.get('recipe_instruction.9').capitalize(),
         'price_tag': request.form.get('price_tag')
     })
-    return redirect(url_for('confirm_addition'))
+    #return redirect(url_for('confirm_addition'))
+    return render_template("confirm_addition.html")
 
-@app.route('/confirm_addition')
-def confirm_addition():
-    return render_template('confirm_addition.html')
-    
 
 
 @app.route('/delete_recipe/<recipe_id>')
