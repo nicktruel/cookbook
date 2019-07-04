@@ -18,13 +18,13 @@
 <!-- Recipe name -->    
                         <div class="form-group">
                             <label for="recipe_name">Recipe name: <small>(required)</small></label>
-                            <input type="text" class="form-control" id="recipe_name" name="recipe_name" placeholder="e.g. chicken curry..." require>
+                            <input type="text" class="form-control" id="recipe_name" name="recipe_name" placeholder="e.g. chicken curry..." required>
                         </div>
 
 <!-- Recipe description -->    
                         <div class="form-group">
                             <label for="recipe_description">Small Description: <small>(required)</small></label>
-                            <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" placeholder="e.g. Classic indian dish, easy to make..." require></textarea>
+                            <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" placeholder="e.g. Classic indian dish, easy to make..." required></textarea>
                         </div>
                         
 <!-- Image of dish -->                        
@@ -160,10 +160,10 @@
                             <div class="col-xs-8">
                                  <div class="form-group">
                                     <label for="recipe_ingredients">List of Ingredients:</label>
-                                    <p><small>(2 at least)</small></p>
+                                    <p><small>(1 at least)</small></p>
                                     <ol class="ingredients">
                                         <li>
-                                            <input type="text" class="form-control" id="recipe_ingredient.0" name="recipe_ingredient.0" placeholder="e.g. Chicken breast" require>
+                                            <input type="text" class="form-control" id="recipe_ingredient.0" name="recipe_ingredient.0" placeholder="e.g. Chicken breast" required>
                                         </li>
                                         <br>
                                         <li>
@@ -220,14 +220,14 @@
                              <div class="col-xs-4">
                                  <div class="form-group">
                                     <label for="recipe_ingredients_quantity">Quantity:</label>
-                                    <p><small>(2 at least)</small></p>
+                                    <p><small>(if required)</small></p>
                                     <ul class="quantity">
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.0" name="recipe_ingredients_quantity.0" placeholder="e.g. 200g" require>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.0" name="recipe_ingredients_quantity.0" placeholder="e.g. 200g">
                                         </li>
                                         <br>
                                         <li>
-                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.1" name="recipe_ingredients_quantity.1" require>
+                                        <input type="text" class="form-control" id="recipe_ingredients_quantity.1" name="recipe_ingredients_quantity.1">
                                         </li>
                                         <br>
                                         <li>
@@ -281,7 +281,7 @@
                             <label for="recipe_instruction">Recipe Method: <small>(At least 1 step required)</small></label>
                             <ol class="instructions">
                                 <li>
-                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.0" name="recipe_instruction.0" placeholder="Step 1" require></textarea>
+                                <textarea type="text" rows="3" class="form-control" id="recipe_instruction.0" name="recipe_instruction.0" placeholder="Step 1" required></textarea>
                                 </li>
                                 <br>
                                 <li>
