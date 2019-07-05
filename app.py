@@ -156,11 +156,6 @@ def update_recipe(recipe_id):
     return render_template("confirm_update.html")
 
 
-#@app.route('/get_recipes')
-#def get_recipes():
-#    return render_template("recipes.html", recipes=mongo.db.recipes.find())
-
-
 # Brings user to page to add a recipe, add_recipe.html
 @app.route('/add_recipe')
 def add_recipe():

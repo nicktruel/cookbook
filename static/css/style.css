@@ -154,6 +154,9 @@ footer {
     border-color: #000;
 }
 
+#pic_recipes{
+    max-height: 266px;
+}
 
 
 /* recipe_details.html */
@@ -168,6 +171,10 @@ footer {
 
 .page-header {
      border-bottom: 0; 
+}
+
+#pic_details{
+    max-height: 515px;
 }
 
 /* add_recipe.html */

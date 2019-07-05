@@ -6,7 +6,11 @@
                 {% for recipe in recipes %}
                 <div class="col-sm-12 col-md-4 bg-success">
                     <div class="thumbnail">
-                        <img src="{{recipe.recipe_img}}" alt="image of {{recipe.recipe_name}}">
+                            {% if recipe.recipe_img == "" %}
+                                <img src="../static/images/download.png">
+                            {% else %}
+                                <img src="{{recipe.recipe_img}}" id="pic_recipes" alt="image of {{recipe.recipe_name}}">
+                            {% endif %}
                         <div class="caption">
                             <h3>{{recipe.recipe_name}}</h3>
                             <p>{{recipe.recipe_description}}</p>
