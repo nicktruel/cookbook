@@ -16,22 +16,21 @@
                     <div class="container-fluid">
 <!-- Recipe name -->                        
                         <div class="form-group">
-                            <label for="recipe_name">Recipe name:</label>
+                            <label for="recipe_name">Recipe name: <small>(required)</small></label>
                             <input type="text" class="form-control" id="recipe_name" name="recipe_name" value="{{recipe.recipe_name}}"  required>
                         </div>
 
 <!-- Recipe description -->                         
                         <div class="form-group">
-                            <label for="recipe_description">Small Description:</label>
+                            <label for="recipe_description">Small Description: <small>(required)</small></label>
                             <textarea type="text" rows="3" class="form-control" id="recipe_description" name="recipe_description" value="{{recipe.recipe_description}}" required>{{recipe.recipe_description}}</textarea>
                         </div>
                         
 <!-- Image of dish --> 
                         <div class="form-group">
-                            <label for="recipe_img">Add image:</label>
+                            <label for="recipe_img">Add your own image if desired:</label>
                             <input type="text" class="form-control" id="recipe_img" name="recipe_img" value="{{recipe.recipe_img}}">
                             <img src="" class="img-responsive" width="100%" height="auto"> 
-                            <p class="help-block">Add your own image if desired</p>
                         </div>
                         
 <!-- Country of origin --> 
@@ -246,6 +245,7 @@
                             <div class="col-xs-8">
                                 <div class="form-group">
                                     <label for="recipe_ingredients">List of Ingredients:</label>
+                                    <p><small>(1 at least)</small></p>
                                     <ol class="ingredients">
                                             <li>
                                             <input type="text" class="form-control" id="recipe_ingredient.0" name="recipe_ingredient.0" value="{{recipe.recipe_ingredient0}}" placeholder="{{recipe.recipe_ingredient0}}" required>
@@ -295,6 +295,7 @@
                              <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="recipe_ingredients">Quantity:</label>
+                                    <p><small>(if required)</small></p>
                                         <ul class="quantity">
                                                 <li>
                                                 <input type="text" class="form-control" id="recipe_ingredients_quantity.0" name="recipe_ingredients_quantity.0" value="{{recipe.recipe_ingredients_quantity0}}">
@@ -345,7 +346,7 @@
 <!-- Recipe method -->   
                     <div class="container-fluid">
                         <div class="form-group">
-                            <label for="recipe_instruction">Recipe Method:</label>
+                            <label for="recipe_instruction">Recipe Method: <small>(At least 1 step required)</small></label>
                             <ol class="instructions">
                                 <li>
                                     <textarea type="text" rows="3" class="form-control" id="recipe_instruction.0" name="recipe_instruction.0" value="{{recipe.recipe_instruction0}}" required>{{recipe.recipe_instruction0}}</textarea>
@@ -390,9 +391,9 @@
                             </ol>
                         </div>
 
-<!-- Cost -->                         
+<!-- Cost -->               
+                        <label for="price_tag">Cost: </label>
                         <div class="form-group">
-                            <label for="price_tag">Cost: </label>
                             <label class="radio-inline">
                                 {% if recipe.price_tag == "option1" %}
                             <input type="radio" id="price_tag" name="price_tag" value="option1" checked> €</input>

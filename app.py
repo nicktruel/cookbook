@@ -96,12 +96,13 @@ def non_veg_recipes():
 
 
 
-
 # Display recipe in details in recipe_details.html
 @app.route('/recipe_details/<recipe_id>')
 def recipe_details(recipe_id):
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("recipe_details.html", recipe=the_recipe)
+
+
 
 # Display page to edit recipes, edit_recipe.html
 @app.route('/edit_recipe/<recipe_id>')
@@ -110,6 +111,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=the_recipe)
 
 
+# Function to update recipes
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     mongo.db.recipes.update({'_id': ObjectId(recipe_id)},
@@ -152,7 +154,6 @@ def update_recipe(recipe_id):
         'recipe_img': request.form.get('recipe_img'),
         'vegetarian_recipe': request.form.get('vegetarian_recipe'),
     })
-    #return redirect(url_for('home_page'))
     return render_template("confirm_update.html")
 
 
@@ -207,11 +208,10 @@ def insert_recipe():
         'recipe_instruction9': request.form.get('recipe_instruction.9').capitalize(),
         'price_tag': request.form.get('price_tag')
     })
-    #return redirect(url_for('confirm_addition'))
     return render_template("confirm_addition.html")
 
 
-
+# Function to delete a recipe
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})

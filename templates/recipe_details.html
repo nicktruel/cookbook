@@ -12,9 +12,9 @@
         <div class="col-xs-12 col-md-10 col-md-offset-1 ">
             <div class="thumbnail">
                 {% if recipe.recipe_img == "" %}
-                    <img src="../static/images/download.png">
+                    <img src="../static/images/food.png">
                 {% else %}
-                    <img src="{{ recipe.recipe_img }} " width="100%" id="pic_details" alt=" image of {{recipe.recipe_name}}">
+                    <img src="{{ recipe.recipe_img }}" id="pic_details" alt=" image of {{recipe.recipe_name}}">
                 {% endif %}
                 <div>
                     <ul class="nav nav-tabs cursive-font" role="tablist">
