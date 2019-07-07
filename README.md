@@ -10,6 +10,8 @@ Built by **_Nicolas Truel_**
 1. [UX](#UX)
 2. [Features](#Features)
 3. [Technologies](#Technologies)
+    1. [Installing](#Installing)
+    2. [Building](#Building)
 4. [Testing](#Testing)
     1. [Android](#Android)
     2. [IOS](#IOS)
@@ -34,23 +36,73 @@ Built by **_Nicolas Truel_**
 
 ## Features <a name="Features"></a>
 
-> The main page offers the users a way to search through different type of recipes via a navbar; recipes can be searched by countries of origin, cost and whether they are vegetarian or not. A link to add new recipes is also available in the search bar.
+* The main page offers the users a way to search through different type of recipes via a navbar; recipes can be searched by countries of origin, cost and whether they are vegetarian or not. A link to add new recipes is also available in the search bar.
 
 ![Home page](/assets/img_readme/home-page.png)
 
-> Each recipe can than be displayed in details on one page with the full list of ingredients, their quantities and the steps to follow for making it. The options of modifying or deleting the recipe are given also on that page.
+* Each recipe can than be displayed in details on one page with the full list of ingredients, their quantities and the steps to follow for making it. The options of modifying or deleting the recipe are given also on that page.
 
-![add recipe](/assets/img_readme/detail-page.png)
+![Detailed recipe](/assets/img_readme/detail-page.png)
 
-> One page allows the users to add their own recipes to the app with all the options available.
+* One page allows the users to add their own recipes to the app with all the options available.
 
-![add recipe](/assets/img_readme/add-page.png)
+![Add recipe](/assets/img_readme/add-page.png)
 
-> The update page can be use for editing recipes (ie. change ingredients or quantities, name, change instructions or image, add or delete step, ingredient, image etc...)
+* The update page can be use for editing recipes (ie. change ingredients or quantities, name, change instructions or image, add or delete step, ingredient, image etc...)
 
+> At a future date, a log in system will be added for the user to be able to keep his recipes safe. An E-mail address and password will be required to create your own cookbook, untouchable from other users.
 
 
 ## Technologies <a name="Technologies"></a>
+
+<dl>
+  <dt>HTML5</dt>
+  <dt>CSS3</dt>
+  <dt>PYTHON3</dt>
+  <dt>JQuery (For dropdown of navbar)</dt>
+  
+  [https://jquery.com/](https://jquery.com/)
+  <dt>BOOTSTRAP 3.7 (Navbar, Carousel, cards in recipe, and recipe details, forms in add recipe and update recipe)</dt>
+  
+  [https://getbootstrap.com/docs/3.3/](https://getbootstrap.com/docs/3.3/)
+  <dt>Recipes are kept in mongodb</dt>
+  
+  [https://www.mongodb.com/](https://www.mongodb.com/)
+</dl>
+
+### Installing
+
+> Requirements
+
+    Click==7.0
+    Flask==1.0.2
+    Flask-PyMongo==2.3.0
+    Jinja2==2.10.1
+    MarkupSafe==1.1.1
+    Werkzeug==0.15.2
+    chardet==2.2.1
+    colorama==0.2.5
+    dnspython==1.16.0
+    html5lib==0.999
+    itsdangerous==1.1.0
+    pycurl==7.19.3
+    pymongo==3.8.0
+    requests==2.2.1
+    six==1.5.2
+    urllib3==1.7.1
+    wheel==0.24.0   
+    
+### Building    
+
+> Screen shot of mongo DB
+
+![recipe in mongoDB ](/assets/img_readme/recipe-mongo.png)
+
+> Route to render recipes with France for origin:
+
+    @app.route('/french_recipes')
+    def french_recipes():
+        return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option1"}).sort("recipe_name"))
 
 ## Testing <a name="Testing"></a>
 
@@ -66,7 +118,6 @@ Built by **_Nicolas Truel_**
  <dl>Macbook
  <dt>Browsers <a name="Browsers"></a></dt>
  <dl>Google Chrome (Version 75.0.3770.100)
- <dl>Firefox (62.0.3)
  <dl>Explorer (42.17134.1.0)
 </dl>
 
