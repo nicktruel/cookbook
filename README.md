@@ -4,8 +4,6 @@ Built by **_Nicolas Truel_**
 ---
 > Web application allowing users to easily store, access, update, add and delete cooking recipes.
 
-
-
 > The deployed version is available here: [Nick's Cookbook](https://cookbook-milestone-3.herokuapp.com/home_page)
 
 #### Table of content
@@ -31,7 +29,8 @@ Built by **_Nicolas Truel_**
 > Built as user friendly as possible, the app should be simple and fast to use. On one click of a button the user can access recipes classified by country, type, price etc...
 
 > First drawing on paper before realisation:
-![wireframe](../assets/img_readme/wireframe.jpg)
+
+![wireframe](/assets/img_readme/wireframe.jpg)
 
 ## Features <a name="Features"></a>
 
@@ -41,11 +40,13 @@ Built by **_Nicolas Truel_**
 
 > Each recipe can than be displayed in details on one page with the full list of ingredients, their quantities and the steps to follow for making it. The options of modifying or deleting the recipe are given also on that page.
 
+![add recipe](/assets/img_readme/detail-page.png)
+
 > One page allows the users to add their own recipes to the app with all the options available.
 
+![add recipe](/assets/img_readme/add-page.png)
+
 > The update page can be use for editing recipes (ie. change ingredients or quantities, name, change instructions or image, add or delete step, ingredient, image etc...)
-
-
 
 
 
