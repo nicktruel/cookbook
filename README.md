@@ -24,7 +24,7 @@ Built by **_Nicolas Truel_**
     2. [Media](#Media)
     3. [Acknowledgements](#Acknowledgements)
 
-## UX <a name="UX"></a>
+## <a name="UX"> UX</a>
 
 > The app is designed to keep your recipes in one place as if it was an old cookbook folder; easy to add, update, delete and search for recipes, it should be simple and intiutive to use. 
 
@@ -34,7 +34,7 @@ Built by **_Nicolas Truel_**
 
 ![wireframe](/assets/img_readme/wireframe.jpg)
 
-## Features <a name="Features"></a>
+##  <a name="Features">Features</a>
 
 * The main page offers the users a way to search through different type of recipes via a navbar; recipes can be searched by countries of origin, cost and whether they are vegetarian or not. A link to add new recipes is also available in the search bar.
 
@@ -53,12 +53,13 @@ Built by **_Nicolas Truel_**
 > At a future date, a log in system will be added for the user to be able to keep his recipes safe. An E-mail address and password will be required to create your own cookbook, untouchable from other users.
 
 
-## Technologies <a name="Technologies"></a>
+##  <a name="Technologies">Technologies</a>
 
 <dl>
   <dt>HTML5</dt>
   <dt>CSS3</dt>
   <dt>PYTHON3</dt>
+  <dt>Flask framework</dt>
   <dt>JQuery (For dropdown of navbar)</dt>
   
   [https://jquery.com/](https://jquery.com/)
@@ -70,7 +71,7 @@ Built by **_Nicolas Truel_**
   [https://www.mongodb.com/](https://www.mongodb.com/)
 </dl>
 
-### Installing
+### <a name="Installing">Installing</a>
 
 > Requirements
 
@@ -92,7 +93,7 @@ Built by **_Nicolas Truel_**
     urllib3==1.7.1
     wheel==0.24.0   
     
-### Building    
+### <a name="Building">Building</a>  
 
 > Screen shot of mongo DB
 
@@ -104,7 +105,7 @@ Built by **_Nicolas Truel_**
     def french_recipes():
         return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option1"}).sort("recipe_name"))
 
-## Testing <a name="Testing"></a>
+## <a name="Testing">Testing </a>
 
 <dl>
  <dt>Android <a name="Android"></a></dt>
@@ -121,12 +122,16 @@ Built by **_Nicolas Truel_**
  <dl>Explorer (42.17134.1.0)
 </dl>
 
-## Deployment <a name="Deployment"></a>
+* CSS codes were checked with W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/)
+* base.html, home.html, recipes.html, recipe_details.html, add_recipe.html and update_recipe.html were checked with W3C Markup Validation Service (https://validator.w3.org/)
+* Chrome DevTools
 
-## Credits <a name="Credits"></a>
+##  <a name="Deployment">Deployment</a>
 
-#### Content <a name="Content"></a>
+##  <a name="Credits">Credits</a>
 
-#### Media <a name="Media"></a>
+####  <a name="Content">Content</a>
 
-#### Acknowledgements <a name="Acknowledgements"></a>
+####  <a name="Media">Media</a>
+
+####  <a name="Acknowledgements">Acknowledgements</a>

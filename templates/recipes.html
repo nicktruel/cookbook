@@ -9,7 +9,7 @@
                 <div class="col-sm-12 col-md-4 bg-success">
                     <div class="thumbnail">
                             {% if recipe.recipe_img == "" %}
-                                <img src="../static/images/food.png">
+                                <img src="../static/images/food.png" alt="pics recipes">
                             {% else %}
                                 <img src="{{recipe.recipe_img}}" id="pic_recipes" alt="image of {{recipe.recipe_name}}">
                             {% endif %}

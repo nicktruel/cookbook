@@ -30,7 +30,6 @@
                         <div class="form-group">
                             <label for="recipe_img">Add or change the image if desired:</label>
                             <input type="text" class="form-control" id="recipe_img" name="recipe_img" value="{{recipe.recipe_img}}">
-                            <img src="" class="img-responsive" width="100%" height="auto"> 
                         </div>
                         
 <!-- Country of origin --> 
@@ -41,12 +40,12 @@
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option1" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option1" checked>
+                                                <input type="radio" name="recipe_country" value="option1" checked>
                                                 France</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option1">France</input>
+                                                <input type="radio" name="recipe_country" value="option1">France</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -54,12 +53,12 @@
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option2" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option2" checked>
+                                                <input type="radio" name="recipe_country" value="option2" checked>
                                                 Thailand</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option2">Thailand</input>
+                                                <input type="radio" name="recipe_country" value="option2">Thailand</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -67,12 +66,12 @@
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option3" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option3" checked>
+                                                <input type="radio" name="recipe_country" value="option3" checked>
                                                 Other</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option3"> Other</input>
+                                                <input type="radio" name="recipe_country" value="option3"> Other</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -82,24 +81,24 @@
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option4" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option4" checked>
+                                                <input type="radio" name="recipe_country" value="option4" checked>
                                                 America</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option4"> America</input>
+                                                <input type="radio" name="recipe_country" value="option4"> America</input>
                                             </label>
                                         {% endif %}
                                     </div>
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option5" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option5" checked>
+                                                <input type="radio" name="recipe_country" value="option5" checked>
                                                 India</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option5"> India</input>
+                                                <input type="radio" name="recipe_country" value="option5"> India</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -108,24 +107,24 @@
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option6" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option6" checked>
+                                                <input type="radio" name="recipe_country" value="option6" checked>
                                                 Italy</input>
                                             </label>
                                             {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option6"> Italy</input>
+                                                <input type="radio" name="recipe_country" value="option6"> Italy</input>
                                             </label>
                                         {% endif %}
                                     </div>
                                     <div class="radio">
                                         {% if recipe.recipe_country == "option7" %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option7" checked>
+                                                <input type="radio" name="recipe_country" value="option7" checked>
                                                 England</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="recipe_country" id="recipe_country" value="option7"> England</input>
+                                                <input type="radio" name="recipe_country" value="option7"> England</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -142,24 +141,24 @@
                                     <div class="radio">
                                         {% if recipe.course_type == "option1" %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option1" checked>
+                                                <input type="radio" name="course_type" value="option1" checked>
                                                 Breakfast</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option1"> Breakfast</input>
+                                                <input type="radio" name="course_type"  value="option1"> Breakfast</input>
                                             </label>
                                         {% endif %}
                                     </div>
                                     <div class="radio">
                                         {% if recipe.course_type == "option2" %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option2" checked>
+                                                <input type="radio" name="course_type" value="option2" checked>
                                                 Starter</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option2"> Starter</input>
+                                                <input type="radio" name="course_type" value="option2"> Starter</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -168,24 +167,24 @@
                                     <div class="radio">
                                         {% if recipe.course_type == "option3" %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option3" checked>
+                                                <input type="radio" name="course_type" value="option3" checked>
                                                 Main</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option3"> Main</input>
+                                                <input type="radio" name="course_type" value="option3"> Main</input>
                                             </label>
                                         {% endif %}
                                     </div>
                                     <div class="radio">
                                         {% if recipe.course_type == "option4" %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option4" checked>
+                                                <input type="radio" name="course_type" value="option4" checked>
                                                 Desert</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option4"> Desert</input>
+                                                <input type="radio" name="course_type" value="option4"> Desert</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -194,12 +193,12 @@
                                     <div class="radio">
                                         {% if recipe.course_type == "option5" %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option5" checked>
+                                                <input type="radio" name="course_type" value="option5" checked>
                                                 Other</input>
                                             </label>
                                         {% else %}
                                             <label>
-                                                <input type="radio" name="course_type" id="course_type" value="option5"> Other</input>
+                                                <input type="radio" name="course_type" value="option5"> Other</input>
                                             </label>
                                         {% endif %}
                                     </div>
@@ -214,24 +213,24 @@
                         <div class="radio-inline">
                             {% if recipe.vegetarian_recipe == "option1" %}
                                 <label>
-                                    <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option1" checked>
+                                    <input type="radio" name="vegetarian_recipe" value="option1" checked>
                                     Yes</input>
                                 </label>
                             {% else %}
                                 <label>
-                                    <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option1"> Yes</input>
+                                    <input type="radio" name="vegetarian_recipe"  value="option1"> Yes</input>
                                 </label>
                             {% endif %}
                         </div>
                         <div class="radio-inline">
                             {% if recipe.vegetarian_recipe == "option2" %}
                                 <label>
-                                    <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option2" checked>
+                                    <input type="radio" name="vegetarian_recipe" value="option2" checked>
                                     No</input>
                                 </label>
                             {% else %}
                                 <label>
-                                    <input type="radio" name="vegetarian_recipe" id="vegetarian_recipe" value="option2" > No</input>
+                                    <input type="radio" name="vegetarian_recipe" value="option2" > No</input>
                                 </label>
                             {% endif %}
                         </div>
@@ -396,23 +395,23 @@
                         <div class="form-group">
                             <label class="radio-inline">
                                 {% if recipe.price_tag == "option1" %}
-                            <input type="radio" id="price_tag" name="price_tag" value="option1" checked> €</input>
+                            <input type="radio" name="price_tag" value="option1" checked> €</input>
                                 {% else %}
-                            <input type="radio" id="price_tag" name="price_tag" value="option1"> €</input>  
+                            <input type="radio" name="price_tag" value="option1"> €</input>  
                                 {% endif %}
                             </label>
                             <label class="radio-inline">
                                 {% if recipe.price_tag == "option2" %}
-                            <input type="radio" id="price_tag" name="price_tag" value="option2" checked> €€</input>
+                            <input type="radio" name="price_tag" value="option2" checked> €€</input>
                                 {% else %}
-                            <input type="radio" id="price_tag" name="price_tag" value="option2"> €€</input>  
+                            <input type="radio" name="price_tag" value="option2"> €€</input>  
                                 {% endif %}
                             </label>
                             <label class="radio-inline">
                                 {% if recipe.price_tag == "option3" %}
-                            <input type="radio" id="price_tag" name="price_tag" value="option3" checked> €€€</input>
+                            <input type="radio" name="price_tag" value="option3" checked> €€€</input>
                                 {% else %}
-                            <input type="radio" id="price_tag" name="price_tag" value="option3"> €€€</input>  
+                            <input type="radio" name="price_tag" value="option3"> €€€</input>  
                                 {% endif %}
                             </label>
                         </div>
