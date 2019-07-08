@@ -16,7 +16,7 @@
     
         <nav class="navbar navbar-default cursive-font theme-color">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
+<!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -27,11 +27,11 @@
                     <a class="navbar-brand" href="{{url_for('home_page')}}"> Nick's Cookbook <i class="material-icons">import_contacts</i></a>
                 </div>
         
-                <!-- Nav links,  and other content for toggling -->
+<!-- Nav links,  and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="search_by"><u>Search by:</u></a></li>
-                 <!-- Country dropdown -->
+<!-- Country dropdown -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Origin<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -44,7 +44,7 @@
                                 <li><a href="{{url_for('other_country_recipes')}}">Other</a></li>
                             </ul>
                         </li>
-                <!-- Course dropdown -->
+<!-- Course dropdown -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -55,7 +55,7 @@
                                 <li><a href="{{url_for('other_course_recipes')}}">Other</a></li>
                             </ul>
                         </li>
-                <!-- Cost dropdown -->
+<!-- Cost dropdown -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cost<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -64,7 +64,7 @@
                                 <li><a href="{{url_for('expensive_recipes')}}">€€€</a></li>
                             </ul>
                         </li>
-                <!-- Vegetarian dropdown -->
+<!-- Vegetarian dropdown -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vegetarian<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -75,9 +75,9 @@
                         <li><a href="{{url_for('add_recipe')}}">Add New</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
+<!-- /.navbar-collapse -->
             </div>
-            <!-- /.container-fluid -->
+<!-- /.container-fluid -->
         </nav>
             
  
@@ -93,14 +93,14 @@
                {% block content %}
                {% endblock %}
                
-               <!-- Scripts for Bootstrap -->
+<!-- Scripts for Bootstrap -->
                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         
         
         
         <script>
-        /* Dropdown of navbar */
+/* Dropdown of navbar */
                 $(document).ready(function() {
                     $('.dropdown-submenu a.test').on("click", function(e) {
                         $(this).next('ul').toggle();

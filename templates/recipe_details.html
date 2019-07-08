@@ -22,7 +22,7 @@
                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><h3>Method</h3></a></li>
                     </ul>
 
-                    <!-- Tab panes -->
+<!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active cursive-font" id="home">
 <!-- List of ingredients name and quantiy -->
@@ -140,6 +140,7 @@
     </div>
 </div>
 
+<!-- Edit and delete buttons -->
 <p class="text-center">
     <a href="/edit_recipe/{{ recipe._id }}" class="btn btn-warning btn-lg" role="button">Edit Recipe</a>
     <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn btn-danger btn-lg" role="button">Delete Recipe</a>
@@ -150,7 +151,7 @@
     $('#myTabs a').click(function (e) {
   e.preventDefault();
   $(this).tab('show')
-})
+});
 </script>
 
 {% endblock %}

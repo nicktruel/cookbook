@@ -19,8 +19,8 @@ Being an avide amateur of good food and cooking myself, the aim of that app was 
     3. [Browsers](#Browsers)
 5. [Deployment](#Deployment)
 6. [Credits](#Credits)
-    1. [Content](#Content)
-    2. [Media](#Media)
+    1. [Media](#Media)
+    2. [Acknowledgements](#Acknowledgements)
     
 
 ## <a name="UX"> UX</a>
@@ -173,12 +173,10 @@ The database of all recipes is stored with mongoDB: https://www.mongodb.com/
 
 ##  <a name="Credits">Credits</a>
 
-####  <a name="Content">Content</a>
-The was inspired from various recipe websites such as Marmiton (https://www.marmiton.org/), 750g (https://www.750g.com/) and many more due to my passion for food and cooking. 
-The main color of the app (Orange) is taken from the Marmiton website.
-
-
 ####  <a name="Media">Media</a>
 The main color of the app (Orange) is taken from the "Marmiton" website.
 
 THe food icon in the recipe cards when no image is added is made by "Freepik from www.flaticon.com".
+
+####  <a name="Acknowledgements">Acknowledgements</a>
+The was inspired from various recipe websites such as Marmiton (https://www.marmiton.org/), 750g (https://www.750g.com/) and many more due to my passion for food and cooking.

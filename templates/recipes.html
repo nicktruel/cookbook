@@ -1,28 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
 
-</div>
-
-        <div class="container recipe_html">
-            <div class="row">
-                {% for recipe in recipes %}
-                <div class="col-sm-12 col-md-4 bg-success">
-                    <div class="thumbnail">
-                            {% if recipe.recipe_img == "" %}
-                                <img src="../static/images/food.png" alt="pics recipes">
-                            {% else %}
-                                <img src="{{recipe.recipe_img}}" id="pic_recipes" alt="image of {{recipe.recipe_name}}">
-                            {% endif %}
+<div>
+    <div class="container recipe_html">
+        <div class="row">
+            {% for recipe in recipes %}
+            <div class="col-sm-12 col-md-4 bg-success">
+                <div class="thumbnail">
+                    {% if recipe.recipe_img == "" %}
+                        <img src="../static/images/food.png" alt="pics recipes"> 
+                    {% else %}
+                        <img src="{{recipe.recipe_img}}" id="pic_recipes" alt="image of {{recipe.recipe_name}}"> 
+                    {% endif %}
                         <div class="caption">
                             <h3>{{recipe.recipe_name}}</h3>
                             <p>{{recipe.recipe_description}}</p>
                             <p class="text-center"><a href="/recipe_details/{{ recipe._id }}" class="btn btn-primary button-cards" role="button">See Recipe</a></p>
                         </div>
-                    </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
+    </div>
+</div>
 
 
 {% endblock %}
