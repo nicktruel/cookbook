@@ -3,6 +3,7 @@ Built by **_Nicolas Truel_**
 
 ---
 > Web application allowing users to easily store, access, update, add and delete cooking recipes.
+Being an avide amateur of good food and cooking myself, the aim of that app was to make it as practical as possible for finding recipes, updating them and being able to follow them while cooking (as if reading recipes from a cookbook on a stand in your kitchen).
 
 > The deployed version is available here: [Nick's Cookbook](https://cookbook-milestone-3.herokuapp.com/home_page)
 
@@ -16,13 +17,11 @@ Built by **_Nicolas Truel_**
     1. [Android](#Android)
     2. [IOS](#IOS)
     3. [Browsers](#Browsers)
-    4. [Bugs](#Bugs)
-    5. [Headaches](#Headaches)
 5. [Deployment](#Deployment)
 6. [Credits](#Credits)
     1. [Content](#Content)
     2. [Media](#Media)
-    3. [Acknowledgements](#Acknowledgements)
+    
 
 ## <a name="UX"> UX</a>
 
@@ -58,8 +57,12 @@ Built by **_Nicolas Truel_**
 <dl>
   <dt>HTML5</dt>
   <dt>CSS3</dt>
-  <dt>PYTHON3</dt>
+  <dt>PYTHON</dt>
   <dt>Flask framework</dt>
+  <dt>PYMONGO</dt>
+  <dt>Google Fonts</dt>
+  
+  [https://fonts.google.com/](https://fonts.google.com/)
   <dt>JQuery (For dropdown of navbar)</dt>
   
   [https://jquery.com/](https://jquery.com/)
@@ -73,7 +76,7 @@ Built by **_Nicolas Truel_**
 
 ### <a name="Installing">Installing</a>
 
-> Requirements
+> **Requirements**
 
     Click==7.0
     Flask==1.0.2
@@ -95,15 +98,48 @@ Built by **_Nicolas Truel_**
     
 ### <a name="Building">Building</a>  
 
-> Screen shot of mongo DB
+> **Screen shot of mongo DB**
 
 ![recipe in mongoDB ](/assets/img_readme/recipe-mongo.png)
 
-> Route to render recipes with France for origin:
+> **Definition to render recipes with France for origin:**
 
     @app.route('/french_recipes')
     def french_recipes():
         return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option1"}).sort("recipe_name"))
+        
+> **Definition to render the recipe chosen in details:**
+
+    @app.route('/recipe_details/<recipe_id>')
+    def recipe_details(recipe_id):
+        the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+        return render_template("recipe_details.html", recipe=the_recipe)
+
+> **Definition to delete a recipe:**
+
+    @app.route('/delete_recipe/<recipe_id>')
+    def delete_recipe(recipe_id):
+        mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+        return render_template("confirm_deletion.html")
+
+> **Definition to insert data in a new object in mongodb:**
+
+    @app.route('/insert_recipe', methods=['POST'])
+    def insert_recipe():
+        recipes=mongo.db.recipes
+        recipes.insert_one({
+            'recipe_name': request.form.get('recipe_name').capitalize(),
+            'recipe_description': request.form.get('recipe_description').capitalize(),
+            'recipe_img': request.form.get('recipe_img'),
+            'recipe_country': request.form.get('recipe_country'),
+            'course_type': request.form.get('course_type'),
+            'vegetarian_recipe': request.form.get('vegetarian_recipe'),
+            'recipe_ingredient0': request.form.get('recipe_ingredient.0').capitalize(),
+            'recipe_ingredients_quantity0': request.form.get('recipe_ingredients_quantity.0').capitalize(),
+            'recipe_instruction0': request.form.get('recipe_instruction.0').capitalize(),
+            'price_tag': request.form.get('price_tag')
+    })
+    return render_template("confirm_addition.html")
 
 ## <a name="Testing">Testing </a>
 
@@ -128,10 +164,21 @@ Built by **_Nicolas Truel_**
 
 ##  <a name="Deployment">Deployment</a>
 
+The code, (built in [AWS Cloud9](https://us-east-1.console.aws.amazon.com/cloud9/ide/be66c5ceaa5246709c7dfe7d64710a13)) is pushed to a remote repository on GitHub and the site is published on GitHub pages https://github.com/nicktruel/cookbook).
+
+The application is deployed to Heroku: https://cookbook-milestone-3.herokuapp.com/
+
+The database of all recipes is stored with mongoDB: https://www.mongodb.com/
+
+
 ##  <a name="Credits">Credits</a>
 
 ####  <a name="Content">Content</a>
+The was inspired from various recipe websites such as Marmiton (https://www.marmiton.org/), 750g (https://www.750g.com/) and many more due to my passion for food and cooking. 
+The main color of the app (Orange) is taken from the Marmiton website.
+
 
 ####  <a name="Media">Media</a>
+The main color of the app (Orange) is taken from the "Marmiton" website.
 
-####  <a name="Acknowledgements">Acknowledgements</a>
+THe food icon in the recipe cards when no image is added is made by "Freepik from www.flaticon.com".
