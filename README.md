@@ -161,6 +161,23 @@ Being an avide amateur of good food and cooking myself, the aim of that app was 
 * CSS codes were checked with W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/)
 * base.html, home.html, recipes.html, recipe_details.html, add_recipe.html and update_recipe.html were checked with W3C Markup Validation Service (https://validator.w3.org/)
 * Chrome DevTools
+* To check if adding a recipe worked, I first added one in MongoDB manually and checked on the app by searching for it through the navabr options: by country, by course, by price and if veg or no. 
+* After creating the add_recipe page I repeated the same tests to make sure all fields were connected to the database.
+* Similarly, after creating the edit_recipe page, it was necessary to check if all fiels in the form matched the data entered when creating the recipe, hence the "if statments":
+
+> **From edit_recipe.html**
+
+        {% if recipe.recipe_country == "option1" %}
+            <label>
+                <input type="radio" name="recipe_country" value="option1" checked> France</input>
+            </label>
+        {% else %}
+            <label>
+                <input type="radio" name="recipe_country" value="option1">France</input>
+            </label>
+        {% endif %}
+
+* And again same process after modifying an existing recipe to check all updated data was recorded.
 
 ##  <a name="Deployment">Deployment</a>
 

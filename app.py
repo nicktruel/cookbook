@@ -160,7 +160,7 @@ def update_recipe(recipe_id):
 # Brings user to page to add a recipe, add_recipe.html
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template("add_recipe.",
+    return render_template("add_recipe.html",
     recipes=mongo.db.recipes.find())
 
 
@@ -217,7 +217,7 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return render_template("confirm_deletion.html")
 
-
+# Error page
 @app.errorhandler(500)
 def error500(error):
     return render_template("error_page.html"), 500
