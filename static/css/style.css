@@ -119,12 +119,6 @@ footer {
 
 /* home.html */
 
-.black-block{
-    width: 100%;
-    height: 300px;
-    background-color: #000;
-}
-
 /* Carousel */
 .carousel-caption, .carousel-indicators{
     color: #fff;
@@ -154,6 +148,12 @@ footer {
     color: #000;
     background-color: #a7a7a7;
     border-color: #a7a7a7;
+}
+
+.black-block{
+    width: 100%;
+    height: 300px;
+    background-color: #000;
 }
 
 /* recipes.html */

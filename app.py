@@ -18,81 +18,114 @@ def home_page():
     return render_template("home.html")
  
  
- 
 # Display recipes by country of origin in recipes.html 
 @app.route('/french_recipes')
 def french_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option1"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option1"}).sort("recipe_name"))
 
 @app.route('/american_recipes')
 def american_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option4"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option4"}).sort("recipe_name"))
   
 @app.route('/thai_recipes')
 def thai_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option2"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option2"}).sort("recipe_name"))
     
 @app.route('/english_recipes')
 def english_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option7"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option7"}).sort("recipe_name"))
     
 @app.route('/italian_recipes')
 def italian_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option6"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option6"}).sort("recipe_name"))
     
 @app.route('/indian_recipes')
 def indian_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option5"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option5"}).sort("recipe_name"))
   
 @app.route('/other_country_recipes')
 def other_country_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option3"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"recipe_country": 
+        "option3"}).sort("recipe_name"))
 
 
 # Display recipes by price in recipes.html
 @app.route('/cheap_recipes')
 def cheap_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "option1"}).sort("recipe_name"))
+    return render_template("recipes.html",
+    recipes=mongo.db.recipes.find({"price_tag": 
+        "option1"}).sort("recipe_name"))
     
 @app.route('/medium_recipes')
 def medium_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "option2"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"price_tag": 
+        "option2"}).sort("recipe_name"))
 
 @app.route('/expensive_recipes')
 def expensive_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"price_tag": "option3"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"price_tag": 
+        "option3"}).sort("recipe_name"))
 
 
 # Dispaly recipes by type of course in recipes.html
 @app.route('/breakfast_recipes')
 def breakfast_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "option1"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"course_type": 
+        "option1"}).sort("recipe_name"))
     
 @app.route('/starter_recipes')
 def starter_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "option2"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"course_type": 
+        "option2"}).sort("recipe_name"))
     
 @app.route('/main_recipes')
 def main_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "option3"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"course_type": 
+        "option3"}).sort("recipe_name"))
 
 @app.route('/desert_recipes')
 def desert_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "option4"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"course_type": 
+        "option4"}).sort("recipe_name"))
 
 @app.route('/other_course_recipes')
 def other_course_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"course_type": "option5"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"course_type": 
+        "option5"}).sort("recipe_name"))
 
 
 # Disaply recipes weither vegetarian or not in recipes.html
 @app.route('/veg_recipes')
 def veg_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "option1"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"vegetarian_recipe": 
+        "option1"}).sort("recipe_name"))
     
 @app.route('/non_veg_recipes')
 def non_veg_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"vegetarian_recipe": "option2"}).sort("recipe_name"))
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find({"vegetarian_recipe": 
+        "option2"}).sort("recipe_name"))
 
 
 
