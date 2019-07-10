@@ -22,7 +22,7 @@ def home_page():
 # Display recipes by country of origin in recipes.html 
 @app.route('/french_recipes')
 def french_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": "option1"}).sort("recipe_name"))
+    return render_template("recipes.html", recipes=mongo.db.recipes.find({"recipe_country": ""}).sort("recipe_name"))
 
 @app.route('/american_recipes')
 def american_recipes():
@@ -218,8 +218,12 @@ def delete_recipe(recipe_id):
     return render_template("confirm_deletion.html")
 
 
+@app.errorhandler(500)
+def error500(error):
+    return '<h1 class="text-center">OUPS!!! Something went wrong! Click <a href="{{url_for("home_page.html")}}">here</a> to go back to the home page</h1>'
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=False)

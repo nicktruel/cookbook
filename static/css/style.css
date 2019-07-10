@@ -17,15 +17,31 @@ html{
 }
 
 .navbar{
-    background-color: #f47321;
     font-size: 1.5em;
     border: none;
     margin-bottom: 0;
     border-radius: 0;
 }
 
+.navbar-default .navbar-brand {
+    color: #4c4c4c;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #827e7e;
+}
+
 .navbar-brand{
     font-size: 1.5em;
+    color: #4c4c4c;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #4c4c4c;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #827e7e;
 }
 
 /* b-g color of navbar menu items when focused */
@@ -34,7 +50,7 @@ html{
 }
 
 .navbar-default .navbar-nav>li>.search_by:hover {
-    color: #777;
+    color: #4c4c4c;
 }
 
 /* Collapse point of navbar at 991px */
@@ -87,7 +103,7 @@ footer {
     right: 0;
     text-align: center;
     z-index: 1;
-    color: #777;
+    color: #1b1717;
 }
 
 .footer{
